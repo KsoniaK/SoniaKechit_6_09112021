@@ -1,0 +1,12 @@
+//LES IMPORTS
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/reset";
+@import "./base/typographie";
+@import "./pages/accueil";
+@import "./pages/photographer";
+@import "./layouts/header";
+@import "./components/buttons";
+@import "./components/likes";
+@import "./components/caroussel";
+//lancer sass (compilation) : npm run sass

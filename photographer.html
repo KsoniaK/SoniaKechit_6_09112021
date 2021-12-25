@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/sass/style.css">
+    <link rel="stylesheet" href="assets/style/sass/photographer.css">
+    <title>Fisheye - photographe </title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <a href="./index.html"><img src="assets/images/logo.png" class="logo" /></a>
+    </header>
+    <!-- fin header -->
+    <!-- main -->
+    <main id="main">
+      <div class="photograph-header">
+        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+      </div>
+      <div class="media_profil">
+     <div id="contact_modal">
+        <div class="modal">
+          <!-- header ?? -->
+          <header>
+            <h2>Contactez-moi</h2>
+            <img src="assets/images/close.svg" id="carrousel-close-contact" onclick="closeModal()" />
+          </header>
+          <!-- fin header ?? -->
+          <form id="monformulaire" name="monformulaire">
+            <div>
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required/>
+              <label>Nom</label>
+              <input type="text" id="nom" name="nom" required/>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" pattern=".+@globex\.com" size="30" required>
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="contact_button" onclick="getValue()">Envoyer</button>
+          </form>
+        </div>
+      </div>
+      <section class="compteur-likes_prix">
+        <div class="compteur-likes_prix_bas-de-page">
+            <p id="picture">297 081</p>
+            <img src="/assets/images/like.png" alt="">
+        </div>
+        <div class="prix">
+            <p>300€ / jour</p>
+        </div>
+    </section>
+    <div>
+      <button id="like" class="like picture">Premier like</button>
+      <!-- <p id="picture"></p> -->
+      <button id="like2" class="like picture">Deuxième like</button>
+      <p id="picture2"></p>
+      <button id="like3" class="like picture">Troisième like</button>
+      <p id="picture3"></p>
+    </div>
+    <div>
+      <p id="likes-total">
+        Total likes : 
+      </p>
+    </div>
+    <button id="modal" onclick="displayModalPicture()">
+      <p>Modal</p>
+    </button>
+    <div id="carrousel">
+      <div id="container">
+      </div>
+      <i class="fas fa-chevron-left bouton" id="g"></i>
+      <i class="fas fa-chevron-left bouton" id="d"></i>
+      <img src="assets/images/close.svg" alt="fermeture modal photo" id="carrousel-close" onclick="closeModalPicture()">
+    </div>
+    </div>
+    </main>
+    <!-- fin main -->
+    <!-- scripts -->
+    <script src="assets/js/scripts/factories/photographers_profil.js"></script>
+    <script src="assets/js/scripts/pages/photographer.js"></script>
+    <script src="assets/js/scripts/utils/contactForm.js"></script>
+    <script src="https://kit.fontawesome.com/db36b887ac.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+//LES MIXINS
+@mixin border($color: blue){
+    border: 2px solid $color
+}
+@mixin box_shadow(){
+    box-shadow: 5px 3px 10px 0px lightgray;
+}
+@mixin DF_JCC{
+    display: flex;
+    justify-content: center;
+}
+@mixin DF_JCSB{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin DF_JCSA{
+    display: flex;
+    justify-content: space-around;
+}
+@mixin DF_JCSA_AIC{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,0 +1,19 @@
+//HEADER DE LA PAGE D'ACCUEIL
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+        & h1{
+            color: $primary_color;
+            margin-right: 100px;
+        }
+        & .logo{
+            height: 50px;
+            margin-left: 100px;
+        }
+}
+//LE HEADER De la page photographer
+
+

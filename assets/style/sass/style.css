@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  z-index: 1;
+  font-size: 16px; }
+
+@font-face {
+  font-family: DM Sans;
+  src: url(/assets/font/DM_Sans/DMSans-Regular.ttf); }
+.photographer_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 70px;
+  margin-top: 50px; }
+  .photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .photographer_section article h2 {
+      color: #D3573C;
+      font-size: 36px;
+      margin: 0; }
+    .photographer_section article h3 {
+      margin: 0; }
+    .photographer_section article p {
+      margin: 0; }
+    .photographer_section article img {
+      height: 200px;
+      width: 200px;
+      border-radius: 7rem;
+      object-fit: cover; }
+
+.photograph-header {
+  background-color: #FAFAFA;
+  height: 300px;
+  margin: 0 100px; }
+
+#contact_modal {
+  display: none; }
+  #contact_modal .modal {
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    margin: auto; }
+    #contact_modal .modal header {
+      justify-content: space-between;
+      width: 100%; }
+      #contact_modal .modal header h2 {
+        font-size: 64px;
+        font-weight: normal;
+        text-align: center; }
+      #contact_modal .modal header img {
+        cursor: pointer; }
+    #contact_modal .modal form {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start; }
+      #contact_modal .modal form div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: self-start;
+        margin-bottom: 26px; }
+        #contact_modal .modal form div label {
+          color: #312E2E;
+          font-size: 36px; }
+        #contact_modal .modal form div input {
+          width: 100%;
+          height: 68px;
+          border: none;
+          border-radius: 5px; }
+        #contact_modal .modal form div #message {
+          width: 100%;
+          height: 40vh; }
+
+.media_profil img {
+  width: 20%; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px; }
+  header h1 {
+    color: #D3573C;
+    margin-right: 100px; }
+  header .logo {
+    height: 50px;
+    margin-left: 100px; }
+
+.contact_button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: #901C1C;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.compteur-likes_prix {
+  border: 2px solid hotpink;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 92.5%;
+  left: 79%;
+  background-color: #DB8876;
+  width: 20%;
+  height: 7%; }
+  .compteur-likes_prix_bas-de-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid firebrick;
+    width: 30%; }
+    .compteur-likes_prix_bas-de-page img {
+      border: 2px solid lawngreen;
+      height: 33%; }
+  .compteur-likes_prix .prix {
+    border: 2px solid darkorange; }
+
+#carrousel {
+  width: 800px;
+  height: 800px;
+  position: relative;
+  border: 2px solid lawngreen;
+  overflow: hidden;
+  display: none; }
+  #carrousel-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width: 3% !important; }
+    #carrousel-close-contact {
+      width: 3% !important; }
+  #carrousel#container {
+    width: 800px;
+    height: 400px; }
+  #carrousel .bouton {
+    top: 400px;
+    position: absolute;
+    cursor: pointer; }
+    #carrousel .bouton#g {
+      left: 0;
+      color: red;
+      font-size: 70px; }
+    #carrousel .bouton#d {
+      right: 0;
+      transform: rotate(180deg);
+      color: red;
+      font-size: 70px; }
+
+.photo {
+  width: 800px;
+  height: 800px;
+  margin: 0;
+  display: inline-block;
+  background-size: cover; }
+
+/*# sourceMappingURL=style.css.map */
