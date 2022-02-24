@@ -33,8 +33,6 @@ function mediaFactory(media, photographer) {
         //                     </div>
         //                 </section>`
         medias.innerHTML = `<section id=${photographerId} class='media'>
-                                ${.map((photograph, index) =>
-                                    )}
                                 <img src="${pictures}" id='images-medias' onclick='displayModalPicture()' onerror="this.style.display='none'"></img>
                                 <video src="${videos}" controls='controls' onerror="this.style.display='none'"></video>
                                 <div class='description-photos'>
