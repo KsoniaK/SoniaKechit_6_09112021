@@ -5,40 +5,41 @@ function photographerFactory(data2) {
 
     function getUserCardDOM() {
         // création des élements
-        const article = document.createElement( 'article' );
-        const img = document.createElement( 'img' );
-        const nom = document.createElement( 'h2' );
-        const ville_pays = document.createElement( 'h3' );
-        const pays = document.createElement( 'h4' );
-        const dicton = document.createElement( 'p' );
-        const prix = document.createElement( 'p' );
-        const a = document.createElement( 'a' )
+        const article = document.createElement('article');
+        const imgElt = document.createElement('img');
+        const nom = document.createElement('h2');
+        const ville = document.createElement('h3');
+        const pays = document.createElement('h4');
+        const proverbe = document.createElement('p');
+        const prix = document.createElement('p');
+        const link = document.createElement('a');
 
         // ajout d'un attribut
-        a.setAttribute("href", `./photographer.html?id=${id}`)
-        img.setAttribute("src", picture)
-        article.classList.add("photographers_profils")
-        article.setAttribute("id", id)
+        link.setAttribute("href", `./photographer.html?id=${id}`);
+        imgElt.setAttribute("src", picture);
+        article.classList.add("photographers_profils");
+        article.setAttribute("id", id);
 
         // leur attribuer du contenu. Ici objets JSON
         nom.textContent = name;
-        ville_pays.textContent = city + ", " + country;
-        dicton.textContent = tagline;
+        ville.textContent = city;
+        pays.textContent = country;
+        proverbe.textContent = tagline;
         prix.textContent = price + "€/jour";
 
         // les placer dans le DOM
-        article.appendChild(a);
-        a.appendChild(img);
+        article.appendChild(link);
+        link.appendChild(imgElt);
         article.appendChild(nom);
-        article.appendChild(ville_pays, pays);
-        article.appendChild(dicton);
+        article.appendChild(ville);
+        article.appendChild(pays);
+        article.appendChild(proverbe);
         article.appendChild(prix); 
-
         return (article);
     }
 
     return {picture,  getUserCardDOM };
-}
+};
 
 
 
