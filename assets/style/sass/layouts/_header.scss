@@ -15,5 +15,31 @@ header{
         }
 }
 //LE HEADER De la page photographer
+.photographer-header{
+    height: 200px;
+    width: 200px;
+    border-radius: 7rem;
+    object-fit: cover;
+}
+.photograph-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+        & h1{
+            color: #D3573C;
+            font-size: 45px;
+            font-weight: normal;
+            margin: 0;
+        }
+        & h2{
+            color: #901C1C;
+        }
+        & .ville-pays-header{
+            display: flex;
+        }
+}
 
-
+// header de la modal
+#h2-modal{
+    text-align: start!important;
+}

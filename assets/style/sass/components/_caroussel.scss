@@ -1,39 +1,49 @@
-#carrousel{
-    width: 800px;
-    height: 800px;
-    position: relative;
-    border: 2px solid lawngreen;
-    overflow: hidden;
+#carousel-div{
+    border: 2px solid gray;
+    width: 62%;
+    margin-left: auto;
+    margin-right: auto;
     display: none;
-    &-close{
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        cursor: pointer;
-        width: 3%!important;
-            &-contact{
-                width: 3%!important;
-            }
-    }
-    &#container{
+    #carrousel{
         width: 800px;
-        height: 400px;
-    }
-    & .bouton{
-        // width: 70px;
-        top: 400px;
-        position: absolute;
-        cursor: pointer;
-        &#g{
-            left: 0;
-            color: red;
-            font-size: 70px;
+        height: 800px;
+        position: relative;
+        border: 2px solid lawngreen;
+        overflow: hidden;
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        &-close{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+            width: 3%!important;
+                &-contact{
+                    width: 5%!important;
+                    height: 5vh;
+                }
         }
-        &#d{
-            right: 0;
-            transform: rotate(180deg);
-            color: red;
-            font-size: 70px;
+        &#container{
+            width: 800px;
+            height: 400px;
+        }
+        & .bouton{
+            // width: 70px;
+            top: 400px;
+            position: absolute;
+            cursor: pointer;
+            &#g{
+                left: 0;
+                color: red;
+                font-size: 70px;
+            }
+            &#d{
+                right: 0;
+                transform: rotate(180deg);
+                color: red;
+                font-size: 70px;
+            }
         }
     }
 }

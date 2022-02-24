@@ -1,6 +1,4 @@
-    async function getPhotographers() {
-        // méthode fecth sans async et await
-        // let result;
+        async function getPhotographers() {
        return fetch("./assets/data/photographers.json")
         .then(response => response.json())
         .then(response2 => {
@@ -20,9 +18,19 @@
     async function init() {
         // Récupère les datas des photographes
         const { photographers } = await getPhotographers();
+        
+        const newPhotographe = [...photographers]
+        newPhotographe.forEach(photographe => {
+            } 
+        )
         displayData(photographers);
     };
     init();
+
+
+// ------------------------------------
+// Exercices: 
+
 // let me = {
 //     prenom: 'sososo',
 //     gateauPreferer: 'alll, tous si cest sucrer',

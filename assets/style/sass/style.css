@@ -25,9 +25,11 @@ body {
     .photographer_section article h2 {
       color: #D3573C;
       font-size: 36px;
-      margin: 0; }
+      margin: 0;
+      font-weight: normal; }
     .photographer_section article h3 {
-      margin: 0; }
+      margin: 0;
+      color: #901C1C; }
     .photographer_section article p {
       margin: 0; }
     .photographer_section article img {
@@ -42,7 +44,7 @@ body {
   margin: 0 100px; }
 
 #contact_modal {
-  display: none; }
+  width: 100%; }
   #contact_modal .modal {
     border-radius: 5px;
     background-color: #DB8876;
@@ -57,6 +59,7 @@ body {
       justify-content: space-between;
       width: 100%; }
       #contact_modal .modal header h2 {
+        margin-right: 1rem;
         font-size: 64px;
         font-weight: normal;
         text-align: center; }
@@ -75,7 +78,8 @@ body {
         margin-bottom: 26px; }
         #contact_modal .modal form div label {
           color: #312E2E;
-          font-size: 36px; }
+          font-size: 36px;
+          margin-top: 3rem; }
         #contact_modal .modal form div input {
           width: 100%;
           height: 68px;
@@ -85,8 +89,35 @@ body {
           width: 100%;
           height: 40vh; }
 
-.media_profil img {
-  width: 20%; }
+.media_profil {
+  width: 94%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .media_profil .media {
+    width: 25%;
+    height: 40vh;
+    margin: 3rem; }
+    .media_profil .media .description-photos {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+  .media_profil img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover; }
+  .media_profil video {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover; }
+  .media_profil .likes-img {
+    width: 6%;
+    height: 2vh;
+    filter: invert(17%) sepia(22%) saturate(6583%) hue-rotate(344deg) brightness(101%) contrast(95%); }
+    .media_profil .likes-img:hover {
+      filter: invert(67%) sepia(10%) saturate(1961%) hue-rotate(322deg) brightness(91%) contrast(88%); }
 
 header {
   display: flex;
@@ -100,6 +131,29 @@ header {
   header .logo {
     height: 50px;
     margin-left: 100px; }
+
+.photographer-header {
+  height: 200px;
+  width: 200px;
+  border-radius: 7rem;
+  object-fit: cover; }
+
+.photograph-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  .photograph-header h1 {
+    color: #D3573C;
+    font-size: 45px;
+    font-weight: normal;
+    margin: 0; }
+  .photograph-header h2 {
+    color: #901C1C; }
+  .photograph-header .ville-pays-header {
+    display: flex; }
+
+#h2-modal {
+  text-align: start !important; }
 
 .contact_button {
   font-size: 20px;
@@ -135,37 +189,46 @@ header {
   .compteur-likes_prix .prix {
     border: 2px solid darkorange; }
 
-#carrousel {
-  width: 800px;
-  height: 800px;
-  position: relative;
-  border: 2px solid lawngreen;
-  overflow: hidden;
+#carousel-div {
+  border: 2px solid gray;
+  width: 62%;
+  margin-left: auto;
+  margin-right: auto;
   display: none; }
-  #carrousel-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    width: 3% !important; }
-    #carrousel-close-contact {
-      width: 3% !important; }
-  #carrousel#container {
+  #carousel-div #carrousel {
     width: 800px;
-    height: 400px; }
-  #carrousel .bouton {
-    top: 400px;
-    position: absolute;
-    cursor: pointer; }
-    #carrousel .bouton#g {
-      left: 0;
-      color: red;
-      font-size: 70px; }
-    #carrousel .bouton#d {
-      right: 0;
-      transform: rotate(180deg);
-      color: red;
-      font-size: 70px; }
+    height: 800px;
+    position: relative;
+    border: 2px solid lawngreen;
+    overflow: hidden;
+    display: none;
+    margin-left: auto;
+    margin-right: auto; }
+    #carousel-div #carrousel-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      width: 3% !important; }
+      #carousel-div #carrousel-close-contact {
+        width: 5% !important;
+        height: 5vh; }
+    #carousel-div #carrousel#container {
+      width: 800px;
+      height: 400px; }
+    #carousel-div #carrousel .bouton {
+      top: 400px;
+      position: absolute;
+      cursor: pointer; }
+      #carousel-div #carrousel .bouton#g {
+        left: 0;
+        color: red;
+        font-size: 70px; }
+      #carousel-div #carrousel .bouton#d {
+        right: 0;
+        transform: rotate(180deg);
+        color: red;
+        font-size: 70px; }
 
 .photo {
   width: 800px;

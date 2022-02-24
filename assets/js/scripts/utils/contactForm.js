@@ -2,11 +2,15 @@
 function displayModal() {
     const modal = document.getElementById("contact_modal");
 	modal.style.display = "block";
+    // const mediaHide = document.getElementById("liste-medias");
+    // mediaHide.style.display = "none";
 }
 
 function closeModal() {
     const modal = document.getElementById("contact_modal");
     modal.style.display = "none";
+    // const mediaHide = document.getElementById("liste-medias");
+    // mediaHide.style.display = "flex";
 }
 
 // on affiche dans la console les données renseignées par l'utilisateur à la soumission du formulaire
