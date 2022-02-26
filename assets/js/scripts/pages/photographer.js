@@ -12,13 +12,14 @@ async function getMedia() {
 
 async function displayDataMedia(medias, photographer) {
     const mediaSection = document.querySelector(".media_profil");
-
+    // fubnction NamedNodeMap(photographer)
     medias.forEach((media) => {
-        const mediaModel = mediaFactory(media);
+        const mediaModel = mediaFactory(media, photographer.name);
         const mediaCardDOM = mediaModel.getMediaCardDOM();
         mediaSection.appendChild(mediaCardDOM);
-        // mediaSection.innerHTML = mediaCardDOM;
     });
+
+
 };
 
 async function initMedia() {
