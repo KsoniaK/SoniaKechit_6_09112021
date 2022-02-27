@@ -1,32 +1,51 @@
 // page individuelle
-function mediaFactory(media, name) {
-
+function mediaFactory(media, name, medias) {
     const {image, title, likes, photographerId, video, id} = media;
 
     const pictures = `/assets/images/photos/${name}/${image}`;
     const videos = `/assets/images/photos/${name}/${video}`;
     const likeImg = `/assets/images/like.png`;
+    
 
     function getMediaCardDOM() {
         // création des élements
-        const titreModal = document.getElementById('h2-modal');
         const listeMedia = document.getElementById('liste-media');
+
         listeMedia.innerHTML =
-            `<section id=${photographerId} class='media'>
-                <img src="${pictures}" id='images-medias' alt="">
-                <video src="${videos}" controls='controls'></video>
-                <div class='description-photos'>
-                    <p>${title}</p>
-                    <p class='jaime-photo' data-jaime="${id}">${likes}</p>
-                    <img src="${likeImg}" class='likes-img' data-id="${id}" alt="">
-                </div>
-            </section>`
-
-        // leur attribuer du contenu. Ici objets JSON
-        titreModal.textContent = "Contactez-moi " + name;
-        return (listeMedia);
+        `${medias.map(function (media){
+                return `<section id="${photographerId}" class='media'>
+                            <img src="/assets/images/photos/${name}/${media.image}" class='images-media' alt="">
+                            <video src="/assets/images/photos/${name}/${media.video}" class="videos-media" controls='controls'></video>
+                            <div class='description-photos'>
+                                <p>${media.title}</p>
+                                <p class='jaime-photo' data-jaime="${media.id}">${media.likes}</p>
+                                <img src="${likeImg}" class='likes-img' data-id="${media.id}" alt="">
+                            </div>
+                        </section>`
+            }).join('')}
+            `
+            
+            // function errorMessage() {
+            //     const img = document.getElementsByClassName('images-media');
+            //     // const vid = document.getElementById('videos-media');
+                
+            //     console.log(typeof img);
+            //     console.log(img);
+            //     // errorMessage
+                
+            //     if(img === undefined){
+            //         console.log("null ou undefined");
+            //         // img.style.display = "none";
+            //         // vid.style.display = "none";
+            //     }else{
+            //         console.log("ok");
+            //     }
+            // }
+            // errorMessage();
+            
+            return (listeMedia);
+        }
+        return {pictures, videos, likeImg, getMediaCardDOM}
     }
-    
-    return {pictures, videos, likeImg, getMediaCardDOM }
-}
 
+    
