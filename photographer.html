@@ -9,34 +9,38 @@
     <title>Fisheye - photographe </title>
   </head>
   <body>
-    <!-- header -->
+    <!-- Header -->
     <header>
       <a href="./index.html"><img src="assets/images/logo.png" class="logo" /></a>
     </header>
-    <!-- fin header -->
-    <!-- main -->
+    <!-- Main -->
     <main id="main">
       <div id="header-photographer" class="photograph-header">
-        <!-- <div id="header-photographer_identite">
-        </div> -->
-      <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
         <a id="url-header"><img id="photographer-header" alt=""></a>
       </div>
-      <section class="compteur-likes_prix">
-        <div class="compteur-likes_prix_bas-de-page">
-            <p id="picture"></p>
-            <img src="/assets/images/like.png" alt="">
-        </div>
-        <div class="prix">
-            <p id="prix-photographe"></p>
-        </div>
-    </section>
+      <!-- Filtres -->
+      <div id="filtres">
+        <p class="p-filtres">Trier par </p>
+        <ul id="select">
+          <div id="select-first">
+            <li class="selected" value="a">Popularité</li>
+            <img src="assets/images/down-arrow.png" alt="">
+          </div>
+          <hr>
+          <li class="selected" value="b">Date</li>
+          <hr>
+          <li class="selected" value="c">Titre</li>
+        </ul>
+      </div>
+
+      <!-- Likes -->
+      <section id="compteur-likes_prix">
+      </section>
+      <!-- Contact modal -->
     <div id="contact_modal">
       <div class="modal">
-        <!-- header ?? -->
         <header id="header-contact">
         </header>
-        <!-- fin header ?? -->
         <form id="monformulaire" name="monformulaire">
           <div>
             <label for="prenom">Prénom</label>
@@ -52,23 +56,20 @@
         </form>
       </div>
     </div>
+    <!-- Medias -->
     <div id="liste-media" class="media_profil">
     </div>
-    <!-- carousel -->
-    <div id="carousel-div">
-    <div id="carrousel">
-      <div id="container">
-      </div>
-      <i class="fas fa-chevron-left bouton" id="g"></i>
-      <i class="fas fa-chevron-left bouton" id="d"></i>
-      <img src="assets/images/close.svg" alt="fermeture modal photo" id="carrousel-close" onclick="closeModalPicture()">
+    <!-- Carousel -->
+    <button id="carousel-display-block">cliquer</button>
+    <div id="carousel">
     </div>
-  </div>
     </main>
-    <!-- fin main -->
-    <!-- scripts -->
+    <!-- Scripts -->
     <script src="assets/js/scripts/factories/header_photographer.js"></script>
     <script src="assets/js/scripts/factories/photographers_profil.js"></script>
+    <script src="assets/js/scripts/factories/likes_total.js"></script>
+    <script src="assets/js/scripts/factories/filtres.js"></script>
+    <script src="assets/js/scripts/factories/carousel.js"></script>
     <script src="assets/js/scripts/pages/photographer.js"></script>
     <script src="assets/js/scripts/utils/contactForm.js"></script>
     <script src="https://kit.fontawesome.com/db36b887ac.js" crossorigin="anonymous"></script>

@@ -1,3 +1,31 @@
 #filtres{
-    border: 2px solid red;
+    display: flex;
+    margin-left: 5rem;
+        & .p-filtres{
+            padding: 1rem;
+        }
+        & #select{
+            background-color: #901C1C;
+            color: white;
+            list-style: none;
+            padding: 0;
+            border-radius: 5px;
+                & #select-first{
+                    display: flex;
+                    align-items: center;
+                        & img{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            margin: 1rem;
+                            filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(204deg) brightness(109%) contrast(100%);
+                        }
+                }
+                & .selected{
+                    padding: 1rem;
+                }
+                & hr{
+                    width: 85%;
+                    color: white;
+                }
+        }
 }

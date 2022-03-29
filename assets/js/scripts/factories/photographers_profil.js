@@ -1,51 +1,24 @@
 // page individuelle
-function mediaFactory(media, name, medias) {
-    const {image, title, likes, photographerId, video, id} = media;
-
-    const pictures = `/assets/images/photos/${name}/${image}`;
-    const videos = `/assets/images/photos/${name}/${video}`;
-    const likeImg = `/assets/images/like.png`;
-    
-
-    function getMediaCardDOM() {
-        // création des élements
-        const listeMedia = document.getElementById('liste-media');
-
-        listeMedia.innerHTML =
-        `${medias.map(function (media){
-                return `<section id="${photographerId}" class='media'>
-                            <img src="/assets/images/photos/${name}/${media.image}" class='images-media' alt="">
-                            <video src="/assets/images/photos/${name}/${media.video}" class="videos-media" controls='controls'></video>
+function mediaFactory(media, name) {
+        const photosMedia = `<img src="/assets/images/photos/${name}/${media.image}" class="images-media" alt=""/>`
+        const videosMedia = `<video src="/assets/images/photos/${name}/${media.video}" class="videos-media" controls="controls"></video>`
+        
+        return `<article id="${media.photographerId}" class='media'>
+                        ${media.image ? photosMedia : videosMedia}
                             <div class='description-photos'>
                                 <p>${media.title}</p>
                                 <p class='jaime-photo' data-jaime="${media.id}">${media.likes}</p>
-                                <img src="${likeImg}" class='likes-img' data-id="${media.id}" alt="">
+                                <img onclick="likes(this)" src="/assets/images/like.png" class='likes-img' data-jaime="${media.id}" alt="bouton-likes"/>
                             </div>
-                        </section>`
-            }).join('')}
-            `
-            
-            // function errorMessage() {
-            //     const img = document.getElementsByClassName('images-media');
-            //     // const vid = document.getElementById('videos-media');
-                
-            //     console.log(typeof img);
-            //     console.log(img);
-            //     // errorMessage
-                
-            //     if(img === undefined){
-            //         console.log("null ou undefined");
-            //         // img.style.display = "none";
-            //         // vid.style.display = "none";
-            //     }else{
-            //         console.log("ok");
-            //     }
-            // }
-            // errorMessage();
-            
-            return (listeMedia);
-        }
-        return {pictures, videos, likeImg, getMediaCardDOM}
-    }
+                    </article>`
+};
 
-    
+
+        // divCarousel.innerHTML = 
+        // `<div id="carousel-container">
+        //     <img class='carousel-img' src="/assets/images/photos/${name}/${medias.image}"/>
+        //  </div>
+        //  <i class="fas fa-chevron-left bouton" id="g"></i>
+        //  <i class="fas fa-chevron-left bouton" id="d"></i>
+        //  <img onclick="closeModalPicture()" src="assets/images/close.svg" alt="fermeture modal photo" id="carousel-close">
+        // `

@@ -1,56 +1,46 @@
-#carousel-div{
-    border: 2px solid gray;
-    width: 62%;
-    margin-left: auto;
-    margin-right: auto;
+#carousel{
+    border: 2px solid greenyellow;
+    width: 30rem;
+    height: 30rem;
     display: none;
-    #carrousel{
-        width: 800px;
-        height: 800px;
-        position: relative;
-        border: 2px solid lawngreen;
-        overflow: hidden;
-        display: none;
-        margin-left: auto;
-        margin-right: auto;
-        &-close{
+    position: relative;
+        &-container{
+            border: 2px solid red;
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            cursor: pointer;
-            width: 3%!important;
-                &-contact{
-                    width: 5%!important;
-                    height: 5vh;
+            left: 16%;
+            top: 8%;
+            width: 20rem;
+            height: 25rem;
+            overflow: hidden;
+                & .carousel-img{
+                    height: 25rem;
+                    width: 20rem;
                 }
         }
-        &#container{
-            width: 800px;
-            height: 400px;
-        }
+
         & .bouton{
-            // width: 70px;
-            top: 400px;
             position: absolute;
             cursor: pointer;
             &#g{
-                left: 0;
-                color: red;
-                font-size: 70px;
+                left: 4%;
+                top: 50%;
+                color: #901C1C;
+                font-size: 40px;
             }
             &#d{
-                right: 0;
+                left: 90%;
+                top: 50%;
                 transform: rotate(180deg);
-                color: red;
-                font-size: 70px;
+                color: #901C1C;
+                font-size: 40px;
             }
         }
-    }
-}
-.photo{
-    width: 800px;
-    height: 800px;
-    margin: 0;
-    display: inline-block;
-    background-size: cover;
+        &-close{
+            height: 3%;
+            width: 3%;
+            position: absolute;
+            left: 90%;
+            top: 8%;
+            filter: invert(16%) sepia(50%) saturate(4246%) hue-rotate(350deg) brightness(50%) contrast(89%);;
+        }
 }
