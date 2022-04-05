@@ -1,4 +1,4 @@
-//HEADER DE LA PAGE D'ACCUEIL
+//Header accueil
 header{
     display: flex;
     flex-direction: row;
@@ -14,17 +14,15 @@ header{
             margin-left: 100px;
         }
 }
-//LE HEADER De la page photographer
-.photographer-header{
-    height: 200px;
-    width: 200px;
-    border-radius: 7rem;
-    object-fit: cover;
-}
+
+//Header photographer
 .photograph-header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: #FAFAFA;
+    height: 300px;
+    margin: 0 100px 10px!important;
         & h1{
             color: #D3573C;
             font-size: 45px;
@@ -37,9 +35,10 @@ header{
         & .ville-pays-header{
             display: flex;
         }
-}
-
-// header de la modal
-#h2-modal{
-    text-align: start!important;
-}
+        & .photo-header{
+            height: 200px;
+            width: 200px;
+            border-radius: 7rem;
+            object-fit: cover;
+        };
+};

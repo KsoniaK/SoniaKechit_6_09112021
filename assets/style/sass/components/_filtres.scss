@@ -1,6 +1,8 @@
+// Filtres
 #filtres{
     display: flex;
     margin-left: 5rem;
+    position: absolute;
         & .p-filtres{
             padding: 1rem;
         }
@@ -10,19 +12,29 @@
             list-style: none;
             padding: 0;
             border-radius: 5px;
-                & #select-first{
-                    display: flex;
-                    align-items: center;
                         & img{
                             width: 1.5rem;
                             height: 1.5rem;
                             margin: 1rem;
                             filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(204deg) brightness(109%) contrast(100%);
                         }
-                }
-                & .selected{
+                & p{
                     padding: 1rem;
                 }
+                & .selected{
+                    display: none;
+                    width: 159px;
+                    position: relative;
+                    &:first-child{
+                            display: block;
+                        }
+                }
+                    & #arrow-filtre{
+                        width: 15%;
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                    }
                 & hr{
                     width: 85%;
                     color: white;

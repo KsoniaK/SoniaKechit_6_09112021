@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
+    <header class="logo-photographer">
       <a href="./index.html"><img src="assets/images/logo.png" class="logo" /></a>
     </header>
     <!-- Main -->
@@ -19,20 +19,23 @@
         <a id="url-header"><img id="photographer-header" alt=""></a>
       </div>
       <!-- Filtres -->
-      <div id="filtres">
+      <div onclick="dropDown(this)" id="filtres" class="filtre">
         <p class="p-filtres">Trier par </p>
         <ul id="select">
-          <div id="select-first">
-            <li class="selected" value="a">Popularité</li>
-            <img src="assets/images/down-arrow.png" alt="">
-          </div>
-          <hr>
-          <li class="selected" value="b">Date</li>
-          <hr>
-          <li class="selected" value="c">Titre</li>
+          <li class="selected">
+            <p onclick="filtre('popularite')" id="popularite">Popularité</p>
+              <img id="arrow-filtre" src="assets/images/down-arrow.png" alt="">
+          </li>
+          <li class="selected">
+            <hr>
+            <p onclick="filtre('date')" id="date">Date</p>
+          </li>
+          <li class="selected">
+            <hr>
+            <p onclick="filtre('titre')" id="titre">Titre</p>
+          </li>
         </ul>
       </div>
-
       <!-- Likes -->
       <section id="compteur-likes_prix">
       </section>
@@ -60,18 +63,26 @@
     <div id="liste-media" class="media_profil">
     </div>
     <!-- Carousel -->
-    <button id="carousel-display-block">cliquer</button>
+    <article id="bgc-carousel">
     <div id="carousel">
+      <div id="carousel-container">
+        <img class='carousel-img' src="/assets/images/photos/Ellie-Rose Wilkens/Architecture_Connected_Curves.jpg"/>
+      </div>
+      <p>Titre</p>
+      <i class="fas fa-chevron-left bouton" id="g"></i>
+      <i class="fas fa-chevron-left bouton" id="d"></i>
+      <img onclick="closeCarousel()" src="assets/images/close.svg" alt="fermeture modal photo" id="carousel-close">
     </div>
+  </article>
     </main>
     <!-- Scripts -->
-    <script src="assets/js/scripts/factories/header_photographer.js"></script>
-    <script src="assets/js/scripts/factories/photographers_profil.js"></script>
-    <script src="assets/js/scripts/factories/likes_total.js"></script>
+    <script src="assets/js/scripts/factories/headerPhotographer.js"></script>
+    <script src="assets/js/scripts/factories/photographersProfil.js"></script>
+    <script src="assets/js/scripts/factories/likesTotal.js"></script>
     <script src="assets/js/scripts/factories/filtres.js"></script>
-    <script src="assets/js/scripts/factories/carousel.js"></script>
     <script src="assets/js/scripts/pages/photographer.js"></script>
-    <script src="assets/js/scripts/utils/contactForm.js"></script>
+    <script src="assets/js/scripts/factories/contactForm.js"></script>
+    <script src="assets/js/scripts/factories/carousel.js"></script>
     <script src="https://kit.fontawesome.com/db36b887ac.js" crossorigin="anonymous"></script>
   </body>
 </html>

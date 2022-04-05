@@ -15,7 +15,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 70px;
-  margin-top: 50px; }
+  margin-top: 50px;
+  margin-bottom: 50px; }
   .photographer_section article {
     justify-self: center;
     display: flex;
@@ -27,67 +28,22 @@ body {
       font-size: 36px;
       margin: 0;
       font-weight: normal; }
-    .photographer_section article h3 {
-      margin: 0;
-      color: #901C1C; }
     .photographer_section article p {
-      margin: 0; }
+      margin: .2rem; }
+    .photographer_section article .prix-photographer {
+      color: grey; }
+    .photographer_section article .ville-pays {
+      display: flex;
+      align-items: center; }
+      .photographer_section article .ville-pays h3 {
+        color: #901C1C;
+        margin: 0;
+        padding-right: .5rem; }
     .photographer_section article img {
       height: 200px;
       width: 200px;
       border-radius: 7rem;
       object-fit: cover; }
-
-.photograph-header {
-  background-color: #FAFAFA;
-  height: 300px;
-  margin: 0 100px 10px !important; }
-
-#contact_modal {
-  width: 100%; }
-  #contact_modal .modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto; }
-    #contact_modal .modal header {
-      justify-content: space-between;
-      width: 100%; }
-      #contact_modal .modal header h2 {
-        margin-right: 1rem;
-        font-size: 64px;
-        font-weight: normal;
-        text-align: start; }
-      #contact_modal .modal header img {
-        cursor: pointer; }
-    #contact_modal .modal form {
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      align-items: flex-start; }
-      #contact_modal .modal form div {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: self-start;
-        margin-bottom: 26px; }
-        #contact_modal .modal form div label {
-          color: #312E2E;
-          font-size: 36px;
-          margin-top: 3rem; }
-        #contact_modal .modal form div input {
-          width: 100%;
-          height: 68px;
-          border: none;
-          border-radius: 5px; }
-        #contact_modal .modal form div #message {
-          width: 100%;
-          height: 40vh; }
 
 .media_profil {
   width: 94%;
@@ -95,15 +51,27 @@ body {
   margin-left: auto;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
   .media_profil .media {
     width: 25%;
     height: 40vh;
-    margin: 3rem; }
+    margin: 2rem; }
     .media_profil .media .description-photos {
       display: flex;
       align-items: center;
       justify-content: space-between; }
+      .media_profil .media .description-photos p {
+        color: #901C1C;
+        margin: 0; }
+      .media_profil .media .description-photos .div-jaime {
+        display: flex;
+        align-items: center; }
+        .media_profil .media .description-photos .div-jaime p {
+          color: #901C1C;
+          padding-right: .5rem;
+          margin: 0; }
   .media_profil img {
     width: 100%;
     height: 40vh;
@@ -113,7 +81,7 @@ body {
     height: 40vh;
     object-fit: cover; }
   .media_profil .likes-img {
-    width: 6%;
+    width: 50%;
     height: 2vh;
     filter: invert(17%) sepia(22%) saturate(6583%) hue-rotate(344deg) brightness(101%) contrast(95%); }
     .media_profil .likes-img:hover {
@@ -132,16 +100,13 @@ header {
     height: 50px;
     margin-left: 100px; }
 
-.photographer-header {
-  height: 200px;
-  width: 200px;
-  border-radius: 7rem;
-  object-fit: cover; }
-
 .photograph-header {
   display: flex;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  background-color: #FAFAFA;
+  height: 300px;
+  margin: 0 100px 10px !important; }
   .photograph-header h1 {
     color: #D3573C;
     font-size: 45px;
@@ -151,9 +116,11 @@ header {
     color: #901C1C; }
   .photograph-header .ville-pays-header {
     display: flex; }
-
-#h2-modal {
-  text-align: start !important; }
+  .photograph-header .photo-header {
+    height: 200px;
+    width: 200px;
+    border-radius: 7rem;
+    object-fit: cover; }
 
 .contact_button {
   font-size: 20px;
@@ -167,47 +134,120 @@ header {
   border-radius: 5px;
   cursor: pointer; }
 
+#contact_modal {
+  width: 100%;
+  z-index: 2;
+  top: 0rem;
+  height: 260vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3); }
+  #contact_modal .modal {
+    box-shadow: 3px -4px 10px gray;
+    top: 2.5rem;
+    left: 30%;
+    position: fixed;
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 40%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    padding-top: 4rem;
+    margin: auto; }
+    #contact_modal .modal header {
+      justify-content: space-between;
+      width: 100%; }
+      #contact_modal .modal header h2 {
+        margin-right: 1rem;
+        font-size: 50px;
+        font-weight: normal;
+        text-align: start;
+        margin-top: 0;
+        margin-bottom: 4rem; }
+      #contact_modal .modal header img {
+        cursor: pointer;
+        position: relative;
+        bottom: 4rem;
+        width: 1.5rem; }
+    #contact_modal .modal form {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start; }
+      #contact_modal .modal form div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: self-start;
+        margin-bottom: 26px; }
+        #contact_modal .modal form div label {
+          color: #312E2E;
+          font-size: 33px; }
+        #contact_modal .modal form div input {
+          width: 100%;
+          height: 50px;
+          border: none;
+          border-radius: 5px; }
+        #contact_modal .modal form div #message {
+          width: 100%;
+          height: 15vh; }
+
 #compteur-likes_prix {
-  border: 2px solid hotpink;
   display: flex;
   justify-content: space-around;
   position: fixed;
-  top: 92.5%;
+  top: 93%;
   left: 79%;
   background-color: #DB8876;
   width: 20%;
-  height: 7%; }
+  height: 7%;
+  z-index: 2; }
 
 .compteur-likes_prix_bas-de-page {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
-  border: 2px solid firebrick;
   width: 30%; }
   .compteur-likes_prix_bas-de-page img {
-    border: 2px solid lawngreen;
-    height: 33%; }
+    height: 30%;
+    padding-left: 0.5rem; }
 
-.prix {
-  border: 2px solid darkorange; }
+#bgc-carousel {
+  display: none;
+  width: 100%;
+  height: 260vh;
+  background-color: white;
+  position: absolute;
+  top: 0%;
+  z-index: 2; }
 
 #carousel {
-  border: 2px solid greenyellow;
-  width: 30rem;
-  height: 30rem;
+  width: 70%;
+  height: 80vh;
   display: none;
-  position: relative; }
+  top: 10%;
+  position: fixed;
+  left: 15%; }
   #carousel-container {
-    border: 2px solid red;
+    box-shadow: 5px 0px 4px gray;
     position: absolute;
-    left: 16%;
+    left: 8.5%;
     top: 8%;
-    width: 20rem;
-    height: 25rem;
+    width: 50rem;
+    height: 65vh;
     overflow: hidden; }
     #carousel-container .carousel-img {
-      height: 25rem;
-      width: 20rem; }
+      width: 50rem;
+      height: 65vh;
+      object-fit: fill; }
+  #carousel p {
+    position: absolute;
+    bottom: 1rem;
+    left: 5rem;
+    color: #901C1C; }
   #carousel .bouton {
     position: absolute;
     cursor: pointer; }
@@ -230,15 +270,10 @@ header {
     top: 8%;
     filter: invert(16%) sepia(50%) saturate(4246%) hue-rotate(350deg) brightness(50%) contrast(89%); }
 
-.photo-header {
-  height: 200px;
-  width: 200px;
-  border-radius: 7rem;
-  object-fit: cover; }
-
 #filtres {
   display: flex;
-  margin-left: 5rem; }
+  margin-left: 5rem;
+  position: absolute; }
   #filtres .p-filtres {
     padding: 1rem; }
   #filtres #select {
@@ -247,16 +282,24 @@ header {
     list-style: none;
     padding: 0;
     border-radius: 5px; }
-    #filtres #select #select-first {
-      display: flex;
-      align-items: center; }
-      #filtres #select #select-first img {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin: 1rem;
-        filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(204deg) brightness(109%) contrast(100%); }
-    #filtres #select .selected {
+    #filtres #select img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 1rem;
+      filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(204deg) brightness(109%) contrast(100%); }
+    #filtres #select p {
       padding: 1rem; }
+    #filtres #select .selected {
+      display: none;
+      width: 159px;
+      position: relative; }
+      #filtres #select .selected:first-child {
+        display: block; }
+    #filtres #select #arrow-filtre {
+      width: 15%;
+      position: absolute;
+      top: 0px;
+      right: 0px; }
     #filtres #select hr {
       width: 85%;
       color: white; }

@@ -8,8 +8,9 @@ function photographerFactory(photographers) {
         const article = document.createElement('article');
         const imgElt = document.createElement('img');
         const nom = document.createElement('h2');
+        const villePays = document.createElement('div');
         const ville = document.createElement('h3');
-        const pays = document.createElement('h4');
+        const pays = document.createElement('h3');
         const proverbe = document.createElement('p');
         const prix = document.createElement('p');
         const link = document.createElement('a');
@@ -19,10 +20,12 @@ function photographerFactory(photographers) {
         imgElt.setAttribute("src", picture);
         article.classList.add("photographers_profils");
         article.setAttribute("id", id);
+        villePays.classList.add("ville-pays");
+        prix.classList.add("prix-photographer");
 
         // leur attribuer du contenu. Ici objets JSON
         nom.textContent = name;
-        ville.textContent = city;
+        ville.textContent = city + ",";
         pays.textContent = country;
         proverbe.textContent = tagline;
         prix.textContent = price + "€/jour";
@@ -31,10 +34,12 @@ function photographerFactory(photographers) {
         article.appendChild(link);
         link.appendChild(imgElt);
         article.appendChild(nom);
-        article.appendChild(ville);
-        article.appendChild(pays);
+        article.appendChild(villePays);
+        villePays.appendChild(ville);
+        villePays.appendChild(pays);
         article.appendChild(proverbe);
         article.appendChild(prix); 
+
         return (article);
     }
 

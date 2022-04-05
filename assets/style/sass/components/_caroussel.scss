@@ -1,23 +1,41 @@
-#carousel{
-    border: 2px solid greenyellow;
-    width: 30rem;
-    height: 30rem;
+#bgc-carousel{
     display: none;
-    position: relative;
+    width: 100%;
+    height: 260vh;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    z-index: 2;
+}
+#carousel{
+    // border: 2px solid greenyellow;
+    width: 70%;
+    height: 80vh;
+    display: none;
+    top: 10%;
+    position: fixed;
+    left: 15%;
         &-container{
-            border: 2px solid red;
+            // border: 2px solid red;
+            box-shadow: 5px 0px 4px gray;
             position: absolute;
-            left: 16%;
+            left: 8.5%;
             top: 8%;
-            width: 20rem;
-            height: 25rem;
+            width: 50rem;
+            height: 65vh;
             overflow: hidden;
                 & .carousel-img{
-                    height: 25rem;
-                    width: 20rem;
+                    width: 50rem;
+                    height: 65vh;
+                    object-fit: fill;
                 }
         }
-
+        & p{
+            position: absolute;
+            bottom: 1rem;
+            left: 5rem;
+            color: #901C1C;
+        }
         & .bouton{
             position: absolute;
             cursor: pointer;

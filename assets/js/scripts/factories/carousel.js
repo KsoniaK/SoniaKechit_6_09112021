@@ -1,28 +1,53 @@
-// // Carousel
-// function carousel(medias){
-//     const divCarousel = document.getElementById('carousel');
-
-//     divCarousel.innerHTML = 
-//     `<div id="carousel-container">
-//         <img class='carousel-img' src="/assets/images/photos/${name}/${medias.image}"/>
-//      </div>
-//      <i class="fas fa-chevron-left bouton" id="g"></i>
-//      <i class="fas fa-chevron-left bouton" id="d"></i>
-//      <img onclick="closeModalPicture()" src="assets/images/close.svg" alt="fermeture modal photo" id="carousel-close">
-//     `
-//     return(divCarousel);
-// };
-
-// fermeture carousel
-function closeModalPicture() {
+//Carousel
+//Apparition carousel au click sur une image
+function openCarousel(){
+    const imgCarousel = Array.from(document.querySelectorAll(".images-media"));
     const divCarousel = document.getElementById("carousel");
+    const bgcCarousel = document.getElementById("bgc-carousel");
+
+        imgCarousel.map((elt) => {
+            elt.addEventListener('click', function(){
+                divCarousel.style.display = "block";
+                bgcCarousel.style.display = "block";
+            });
+        });
+};
+
+//Fermeture carousel
+function closeCarousel() {
+    const divCarousel = document.getElementById("carousel");
+    const bgcCarousel = document.getElementById("bgc-carousel");
+
     divCarousel.style.display = "none";
-}
-// apparition carousel au click sur le bouton
-const imgCarousel = document.getElementById("carousel-display-block");
-const divCarousel = document.getElementById("carousel");
-    imgCarousel.addEventListener('click',function(){
-        divCarousel.style.display = 'block';
-    });
+    bgcCarousel.style.display = "none";
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// imgCarousel.map(img => {
+//     img.addEventListener('click', function(){
+//         console.log("cliqué");
+//         divCarousel.style.display = 'block';
+//     })
+// })
+    // imgCarousel.addEventListener('click',function(){
+    //     divCarousel.style.display = 'block';
+    // });
 
 

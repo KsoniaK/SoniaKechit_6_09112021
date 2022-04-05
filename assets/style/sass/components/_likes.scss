@@ -1,27 +1,23 @@
 // compteur likes bas de page
 #compteur-likes_prix{
-    border: 2px solid hotpink;
     display: flex;
     justify-content: space-around;
     position: fixed;
-    top: 92.5%;
+    top: 93%;
     left: 79%;
     background-color:  #DB8876;
     width: 20%;
     height: 7%;
+    z-index: 2;
 }
 .compteur-likes_prix_bas-de-page{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    border: 2px solid firebrick;
     width: 30%;
         & img{
-            border: 2px solid lawngreen;
-            height: 33%;
+            height: 30%;
+            padding-left: .5rem
         }
-}
-.prix{
-    border: 2px solid darkorange;
-}
+};
 

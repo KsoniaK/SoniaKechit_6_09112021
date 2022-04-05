@@ -1,9 +1,10 @@
-//LE MAIN
+//Main
 .photographer_section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
     margin-top: 50px;
+    margin-bottom: 50px;
         & article{
             justify-self: center;
             display: flex;
@@ -16,12 +17,20 @@
                     margin: 0;
                     font-weight: normal;
                 }
-                & h3{
-                    margin: 0;
-                    color: #901C1C;
-                }
                 & p{
-                    margin: 0;
+                    margin: .2rem;
+                }
+                & .prix-photographer{
+                    color: grey;
+                }
+                & .ville-pays{
+                    display: flex;
+                    align-items: center;
+                        & h3{
+                            color: #901C1C;
+                            margin: 0;
+                            padding-right: .5rem;
+                        }
                 }
                 & img{
                     height: 200px;

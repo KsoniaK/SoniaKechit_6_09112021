@@ -20,49 +20,24 @@ async function displayDataMedia(medias, photographerFiltres) {
     medias.forEach((media) => {
         listeMedia.innerHTML += mediaFactory(media, photographer.name);
 
-        // filtres(medias);
+        dateFiltre(media.date);
     });
 };
 
 async function initMedia() {
     const { medias, photographers } = await getMedia();
-
     const allMedias = medias.filter(medi => Number(idUrl) === medi.photographerId);
     const photographerFiltres = photographers.filter(photograph => Number(idUrl) === photograph.id);
+    allMedias.sort(function(a, b) {
+        var titleA = a.title.toLowerCase(), titleB = b.title.toLowerCase();
+        if (titleA < titleB) return -1;
+        if (titleA > titleB) return 1;
+        return 0;
+    });
+    // console.log(allMedias);
     displayDataMedia(allMedias, photographerFiltres);
 };
 initMedia();
 
 
-// Likes
-function likes(imgLike){
-    const idMedia = imgLike.getAttribute('data-jaime');
-    const pElt = document.querySelector(`p[data-jaime = '${idMedia}' ]`);
-
-        let nbrLike = Number(pElt.textContent) + 1;
-        pElt.textContent = nbrLike;
-
-        // Likes total
-        function allLikes(){
-            const pElts = Array.from(document.querySelectorAll(`p[data-jaime]`));
-            const pTotal = document.getElementById('picture');
-            
-            // 
-            const sumLikes = pElts
-            .map(pElt => Number(pElt.textContent))
-            .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
-
-            //affichage résultat
-            pTotal.textContent = sumLikes;
-
-            // Version moins simplifiée
-            // const addition = pElts.map(pElt => {
-            //     return Number(pElt.textContent)
-            // })
-            // const sumLikes = addition.reduce((previousValue, currentValue) => previousValue + currentValue, 0);
-            // pTotal.textContent = sumLikes;
-        }
-        allLikes();
-    }
-
-
+    
