@@ -11,12 +11,12 @@ function headerPhotographer(photographer){
         </div>
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
         <div>
-            <img class="photo-header" src="/assets/images/photos/Photographers_ID_Photos/${photographer.portrait}"/>
+            <img class="photo-header" src="/assets/images/photos/Photographers_ID_Photos/${photographer.portrait}" alt="${photographer.name}"/>
         </div>`
         
     headerContact.innerHTML = 
-        `<h2>Contactez-moi ${photographer.name}</h2>
-         <img src="assets/images/close.svg" id="carrousel-close-contact" onclick="closeModal()"/>`
+        `<h2>Contactez-moi <br> ${photographer.name}</h2>
+         <img src="assets/images/close.svg" id="carrousel-close-contact" onclick="closeModal()" alt="${photographer.name}"/>`
 
         return(headerPhotographer, headerContact);
 };

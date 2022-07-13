@@ -11,6 +11,10 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+                & a{
+                    text-decoration: none;
+                    text-align: center;
+                }
                 & h2{
                     color: #D3573C;
                     font-size: 36px;
@@ -37,6 +41,7 @@
                     width: 200px;
                     border-radius: 7rem;
                     object-fit: cover;
+                    
                 }
         }  
 }

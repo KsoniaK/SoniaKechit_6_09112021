@@ -1,14 +1,17 @@
-// Likes total
-function likesTotal(photographer){
+let sumLikes;
+
+
+function likesTotal(price, likes){
     const sectionLikesTotal = document.getElementById('compteur-likes_prix');
 
     sectionLikesTotal.innerHTML = 
-        `<div class='compteur-likes_prix_bas-de-page'>
-            <p id='picture'></p>
-            <img src='/assets/images/like.png' alt=''>
+        `
+        <div class='compteur-likes_prix_bas-de-page'>
+            <p id='picture'>${likes}</p>
+            <img src='/assets/images/like.png' alt='likes total'>
          </div>
          <div class='prix'>
-            <p id='prix-photographe'>${photographer.price}$ / jour</p>
+            <p id='prix-photographe'>${price}$ / jour</p>
          </div>
         `
         return(sectionLikesTotal);
@@ -28,17 +31,14 @@ function likes(imgLike){
         const pTotal = document.getElementById('picture');
         
         // map et reduce pour additionner les likes
-        const sumLikes = pElts
+        sumLikes = pElts
         .map(pElt => Number(pElt.textContent))
         .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
 
-            //affichage résultat
-            pTotal.textContent = sumLikes;
-        };
-        allLikes();
+        //affichage résultat
+        pTotal.textContent = sumLikes;
     };
+    allLikes();
+    console.log(sumLikes);
+};
 
-        // document.addEventListener('DOMContentLoaded', function() {
-    //     // pTotal.textContent = sumLikes;
-    //     console.log('HTML prêt !');
-    // });

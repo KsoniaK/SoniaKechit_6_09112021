@@ -1,88 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style/sass/style.css">
-    <link rel="stylesheet" href="assets/style/sass/photographer.css">
-    <title>Fisheye - photographe </title>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="logo-photographer">
-      <a href="./index.html"><img src="assets/images/logo.png" class="logo" /></a>
-    </header>
-    <!-- Main -->
-    <main id="main">
-      <div id="header-photographer" class="photograph-header">
-        <a id="url-header"><img id="photographer-header" alt=""></a>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/sass/style.css">
+  <link rel="stylesheet" href="assets/style/sass/photographer.css">
+  <title>Fisheye - photographe </title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="logo-photographer">
+    <div class="logo-header">
+      <a href="./index.html"><img src="assets/images/logo.png" class="logo" alt="Page d'accueil Fisheye"/></a>
+    </div>
+    <section id="header-photographer" class="photograph-header">
+    </section>
+  </header>
+  <!-- Main -->
+  <main id="main">
+    <!-- Filtres -->
+    <section class="section-filtre">
+      <div class="label-filtre">
+        <label for="select">Trier par</label>
       </div>
-      <!-- Filtres -->
-      <div onclick="dropDown(this)" id="filtres" class="filtre">
-        <p class="p-filtres">Trier par </p>
-        <ul id="select">
-          <li class="selected">
-            <p onclick="filtre('popularite')" id="popularite">Popularité</p>
-              <img id="arrow-filtre" src="assets/images/down-arrow.png" alt="">
-          </li>
-          <li class="selected">
-            <hr>
-            <p onclick="filtre('date')" id="date">Date</p>
-          </li>
-          <li class="selected">
-            <hr>
-            <p onclick="filtre('titre')" id="titre">Titre</p>
-          </li>
-        </ul>
-      </div>
-      <!-- Likes -->
-      <section id="compteur-likes_prix">
-      </section>
-      <!-- Contact modal -->
-    <div id="contact_modal">
+      <button onclick="toggleDropDown(this)" id="filtres" class="filtre">
+      </button>
+    </section>
+    <!-- Likes -->
+    <section id="compteur-likes_prix">
+    </section>
+    <!-- Contact modal -->
+    <section id="contact_modal">
       <div class="modal">
         <header id="header-contact">
         </header>
         <form id="monformulaire" name="monformulaire">
           <div>
             <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" required/>
+            <input type="text" id="prenom" name="prenom" alt="Prénom" required />
             <label>Nom</label>
-            <input type="text" id="nom" name="nom" required/>
+            <input type="text" id="nom" name="nom" alt="Nom" required />
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" pattern=".+@globex\.com" size="30" required>
+            <input type="email" id="email" name="email" pattern=".+@globex\.com" size="30" alt="Email" required>
             <label for="message">Votre message</label>
             <textarea id="message" name="message" required></textarea>
           </div>
           <button class="contact_button" onclick="getValue()">Envoyer</button>
         </form>
       </div>
-    </div>
+    </section>
     <!-- Medias -->
-    <div id="liste-media" class="media_profil">
-    </div>
+    <section id="liste-media" class="media_profil">
+    </section>
     <!-- Carousel -->
-    <article id="bgc-carousel">
-    <div id="carousel">
+    <section id="bgc-carousel" aria-label="voir image">
       <div id="carousel-container">
-        <img class='carousel-img' src="/assets/images/photos/Ellie-Rose Wilkens/Architecture_Connected_Curves.jpg"/>
+        <i class="fas fa-chevron-left bouton" id="g" alt="image suivante"></i>
+        <i class="fas fa-chevron-left bouton" id="d" alt="image précedente"></i>
+        <img src="assets/images/close.svg" id="carousel-close" alt="fermeture modal photo" onclick="closeModalCarousel()"/>
       </div>
-      <p>Titre</p>
-      <i class="fas fa-chevron-left bouton" id="g"></i>
-      <i class="fas fa-chevron-left bouton" id="d"></i>
-      <img onclick="closeCarousel()" src="assets/images/close.svg" alt="fermeture modal photo" id="carousel-close">
-    </div>
-  </article>
-    </main>
-    <!-- Scripts -->
-    <script src="assets/js/scripts/factories/headerPhotographer.js"></script>
-    <script src="assets/js/scripts/factories/photographersProfil.js"></script>
-    <script src="assets/js/scripts/factories/likesTotal.js"></script>
-    <script src="assets/js/scripts/factories/filtres.js"></script>
-    <script src="assets/js/scripts/pages/photographer.js"></script>
-    <script src="assets/js/scripts/factories/contactForm.js"></script>
-    <script src="assets/js/scripts/factories/carousel.js"></script>
-    <script src="https://kit.fontawesome.com/db36b887ac.js" crossorigin="anonymous"></script>
-  </body>
+    </section>
+  </main>
+  <!-- Scripts -->
+  <script src="assets/js/pages/photographers.js"></script>
+  <script src="assets/js/service/service.js"></script>
+  <script src="assets/js/headerPhotographer.js"></script>
+  <script src="assets/js/factories/mediaCardFactory.js"></script>
+  <script src="assets/js/factories/contactForm.js"></script>
+  <script src="assets/js/likesTotal.js"></script>
+  <script src="assets/js/trie.js"></script>
+  <script src="assets/js/factories/carousel.js"></script>
+  <script src="https://kit.fontawesome.com/db36b887ac.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

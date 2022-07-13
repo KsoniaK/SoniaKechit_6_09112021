@@ -9,15 +9,20 @@
     width: 20%;
     height: 7%;
     z-index: 2;
-}
-.compteur-likes_prix_bas-de-page{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 30%;
-        & img{
-            height: 30%;
-            padding-left: .5rem
+        .compteur-likes_prix_bas-de-page{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 30%;
+                & img{
+                    height: 30%;
+                    padding-left: .5rem
+                }
+        };
+        .prix{
+            align-items: center;
+            display: flex;
         }
-};
+}
+
 

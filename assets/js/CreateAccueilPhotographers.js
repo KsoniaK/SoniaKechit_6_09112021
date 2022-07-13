@@ -1,5 +1,5 @@
-function photographerFactory(photographers) {
-    const {portrait, name, city, country, tagline, price, id} = photographers;
+function photographerFactory(photographer) {
+    const {portrait, name, city, country, tagline, price, id} = photographer;
     
     const picture = `/assets/images/photos/Photographers_ID_Photos/${portrait}`;
 
@@ -18,6 +18,7 @@ function photographerFactory(photographers) {
         // ajout d'un attribut
         link.setAttribute("href", `./photographer.html?id=${id}`);
         imgElt.setAttribute("src", picture);
+        imgElt.setAttribute("alt", `${name}`);
         article.classList.add("photographers_profils");
         article.setAttribute("id", id);
         villePays.classList.add("ville-pays");
@@ -33,7 +34,8 @@ function photographerFactory(photographers) {
         // les placer dans le DOM
         article.appendChild(link);
         link.appendChild(imgElt);
-        article.appendChild(nom);
+        link.appendChild(nom);
+        // article.appendChild(nom);
         article.appendChild(villePays);
         villePays.appendChild(ville);
         villePays.appendChild(pays);

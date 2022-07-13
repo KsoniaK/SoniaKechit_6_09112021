@@ -23,6 +23,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
+    .photographer_section article a {
+      text-decoration: none;
+      text-align: center; }
     .photographer_section article h2 {
       color: #D3573C;
       font-size: 36px;
@@ -52,7 +55,6 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 5rem;
   margin-bottom: 5rem; }
   .media_profil .media {
     width: 25%;
@@ -75,7 +77,8 @@ body {
   .media_profil img {
     width: 100%;
     height: 40vh;
-    object-fit: cover; }
+    object-fit: cover;
+    cursor: pointer; }
   .media_profil video {
     width: 100%;
     height: 40vh;
@@ -87,18 +90,30 @@ body {
     .media_profil .likes-img:hover {
       filter: invert(67%) sepia(10%) saturate(1961%) hue-rotate(322deg) brightness(91%) contrast(88%); }
 
-header {
+.header-index {
   display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header-index h1 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #901C1C; }
+
+header {
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  height: 90px; }
+  align-items: center; }
   header h1 {
     color: #D3573C;
     margin-right: 100px; }
   header .logo {
     height: 50px;
-    margin-left: 100px; }
+    margin-left: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px; }
+
+.logo-header {
+  display: flex; }
 
 .photograph-header {
   display: flex;
@@ -124,7 +139,7 @@ header {
 
 .contact_button {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
   color: white;
   padding: 11px;
   width: 170px;
@@ -138,7 +153,7 @@ header {
   width: 100%;
   z-index: 2;
   top: 0rem;
-  height: 260vh;
+  height: 261vh;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.3); }
   #contact_modal .modal {
@@ -154,24 +169,24 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 35px;
-    padding-top: 4rem;
     margin: auto; }
     #contact_modal .modal header {
       justify-content: space-between;
-      width: 100%; }
+      width: 100%;
+      height: 15vh; }
       #contact_modal .modal header h2 {
         margin-right: 1rem;
-        font-size: 50px;
+        font-size: 45px;
         font-weight: normal;
         text-align: start;
-        margin-top: 0;
-        margin-bottom: 4rem; }
+        margin-top: -15px; }
       #contact_modal .modal header img {
         cursor: pointer;
         position: relative;
         bottom: 4rem;
-        width: 1.5rem; }
+        width: 2rem;
+        left: 93%;
+        bottom: 116%; }
     #contact_modal .modal form {
       display: flex;
       width: 100%;
@@ -205,33 +220,35 @@ header {
   width: 20%;
   height: 7%;
   z-index: 2; }
-
-.compteur-likes_prix_bas-de-page {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  width: 30%; }
-  .compteur-likes_prix_bas-de-page img {
-    height: 30%;
-    padding-left: 0.5rem; }
+  #compteur-likes_prix .compteur-likes_prix_bas-de-page {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 30%; }
+    #compteur-likes_prix .compteur-likes_prix_bas-de-page img {
+      height: 30%;
+      padding-left: 0.5rem; }
+  #compteur-likes_prix .prix {
+    align-items: center;
+    display: flex; }
 
 #bgc-carousel {
   display: none;
   width: 100%;
-  height: 260vh;
-  background-color: white;
+  height: 261vh;
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0%;
   z-index: 2; }
 
-#carousel {
-  width: 70%;
+#carousel-container {
+  width: 67%;
   height: 80vh;
-  display: none;
   top: 10%;
   position: fixed;
-  left: 15%; }
-  #carousel-container {
+  left: 17%;
+  background-color: white; }
+  #carousel-container .carousel {
     box-shadow: 5px 0px 4px gray;
     position: absolute;
     left: 8.5%;
@@ -239,42 +256,53 @@ header {
     width: 50rem;
     height: 65vh;
     overflow: hidden; }
-    #carousel-container .carousel-img {
+    #carousel-container .carousel .carousel-img {
       width: 50rem;
       height: 65vh;
-      object-fit: fill; }
-  #carousel p {
+      object-fit: cover; }
+  #carousel-container p {
     position: absolute;
     bottom: 1rem;
-    left: 5rem;
     color: #901C1C; }
-  #carousel .bouton {
+  #carousel-container .bouton {
     position: absolute;
     cursor: pointer; }
-    #carousel .bouton#g {
-      left: 4%;
+    #carousel-container .bouton#g {
+      left: 3%;
       top: 50%;
       color: #901C1C;
       font-size: 40px; }
-    #carousel .bouton#d {
-      left: 90%;
+    #carousel-container .bouton#d {
+      left: 94%;
       top: 50%;
       transform: rotate(180deg);
       color: #901C1C;
       font-size: 40px; }
-  #carousel-close {
+  #carousel-container #carousel-close {
+    cursor: pointer;
     height: 3%;
     width: 3%;
     position: absolute;
-    left: 90%;
+    left: 93%;
     top: 8%;
     filter: invert(16%) sepia(50%) saturate(4246%) hue-rotate(350deg) brightness(50%) contrast(89%); }
 
-#filtres {
+.mySlides {
+  display: none; }
+
+.section-filtre {
   display: flex;
+  height: 7vh;
+  margin-left: 6rem; }
+  .section-filtre .label-filtre {
+    align-self: center; }
+
+#filtres {
   margin-left: 5rem;
-  position: absolute; }
-  #filtres .p-filtres {
+  position: absolute;
+  border: none;
+  background-color: transparent; }
+  #filtres .input-filtre {
     padding: 1rem; }
   #filtres #select {
     background-color: #901C1C;
@@ -287,19 +315,18 @@ header {
       height: 1.5rem;
       margin: 1rem;
       filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(204deg) brightness(109%) contrast(100%); }
-    #filtres #select p {
-      padding: 1rem; }
+    #filtres #select option {
+      padding: 1rem;
+      text-align: start; }
     #filtres #select .selected {
       display: none;
       width: 159px;
       position: relative; }
       #filtres #select .selected:first-child {
-        display: block; }
+        display: flex; }
     #filtres #select #arrow-filtre {
-      width: 15%;
-      position: absolute;
-      top: 0px;
-      right: 0px; }
+      display: flex;
+      align-self: center; }
     #filtres #select hr {
       width: 85%;
       color: white; }

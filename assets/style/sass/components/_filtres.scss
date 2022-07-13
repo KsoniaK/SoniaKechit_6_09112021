@@ -1,9 +1,18 @@
 // Filtres
-#filtres{
+.section-filtre{
     display: flex;
+    height: 7vh;
+    margin-left: 6rem;
+        & .label-filtre{
+            align-self: center;
+        }
+}
+#filtres{
     margin-left: 5rem;
     position: absolute;
-        & .p-filtres{
+    border: none;
+    background-color: transparent;
+        & .input-filtre{
             padding: 1rem;
         }
         & #select{
@@ -18,22 +27,21 @@
                             margin: 1rem;
                             filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(204deg) brightness(109%) contrast(100%);
                         }
-                & p{
+                & option{
                     padding: 1rem;
+                    text-align: start;
                 }
                 & .selected{
                     display: none;
                     width: 159px;
                     position: relative;
                     &:first-child{
-                            display: block;
-                        }
+                        display: flex;
+                    }
                 }
                     & #arrow-filtre{
-                        width: 15%;
-                        position: absolute;
-                        top: 0px;
-                        right: 0px;
+                        display: flex;
+                        align-self: center;
                     }
                 & hr{
                     width: 85%;
