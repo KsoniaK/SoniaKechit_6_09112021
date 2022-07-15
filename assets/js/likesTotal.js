@@ -1,7 +1,10 @@
 function total(){
     const pElts = Array.from(document.querySelectorAll(`p[data-id]`));
     const likeTotalElmt = document.getElementById('like-total');
+    const prix = document.getElementById('prix-photographe');
     let result = 0 ;
+
+    prix.textContent = photographerFiltres[0].price;
 
     pElts.map(pElt => {
         const pEltsContent = Number(pElt.textContent);
@@ -11,10 +14,6 @@ function total(){
 }
 
 function likes(imgLike){
-    const prix = document.getElementById('prix-photographe');
-
-    prix.textContent = photographerFiltres[0].price;
-        
         const idMedia = imgLike.getAttribute('data-id');
         const pUser = document.querySelector(`p[data-id = '${idMedia}' ]`);
 

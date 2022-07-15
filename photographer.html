@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style/sass/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="assets/style/sass/photographer.css">
   <title>Fisheye - photographe </title>
 </head>
@@ -66,6 +67,10 @@
     <!-- Carousel -->
     <section id="bgc-carousel" aria-label="voir image">
       <div id="carousel-container">
+        <div class="carousel">
+          <div class="divCarousel-img"></div>
+          <p></p>
+        </div>
         <i class="fas fa-chevron-left bouton" id="g" alt="image suivante"></i>
         <i class="fas fa-chevron-left bouton" id="d" alt="image précedente"></i>
         <img src="assets/images/close.svg" id="carousel-close" alt="fermeture modal photo" onclick="closeModalCarousel()"/>
@@ -81,7 +86,6 @@
   <script src="assets/js/likesTotal.js"></script>
   <script src="assets/js/trie.js"></script>
   <script src="assets/js/factories/carousel.js"></script>
-  <script src="https://kit.fontawesome.com/db36b887ac.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
