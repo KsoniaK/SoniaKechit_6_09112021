@@ -1,44 +1,24 @@
-let sumLikes;
+function total(){
+    const pElts = Array.from(document.querySelectorAll(`p[data-id]`));
+    const likeTotalElmt = document.getElementById('like-total');
+    let result = 0 ;
 
+    pElts.map(pElt => {
+        const pEltsContent = Number(pElt.textContent);
+        result += pEltsContent;
+    });
+    likeTotalElmt.textContent = result;
+}
 
-function likesTotal(price, likes){
-    const sectionLikesTotal = document.getElementById('compteur-likes_prix');
-
-    sectionLikesTotal.innerHTML = 
-        `
-        <div class='compteur-likes_prix_bas-de-page'>
-            <p id='picture'>${likes}</p>
-            <img src='/assets/images/like.png' alt='likes total'>
-         </div>
-         <div class='prix'>
-            <p id='prix-photographe'>${price}$ / jour</p>
-         </div>
-        `
-        return(sectionLikesTotal);
-};
-
-// Likes
 function likes(imgLike){
-    const idMedia = imgLike.getAttribute('data-jaime');
-    const pElt = document.querySelector(`p[data-jaime = '${idMedia}' ]`);
-    
-    let nbrLike = Number(pElt.textContent) + 1;
-    pElt.textContent = nbrLike;
-    
-    // Likes total
-    function allLikes(){
-        const pElts = Array.from(document.querySelectorAll(`p[data-jaime]`));
-        const pTotal = document.getElementById('picture');
+    const prix = document.getElementById('prix-photographe');
+
+    prix.textContent = photographerFiltres[0].price;
         
-        // map et reduce pour additionner les likes
-        sumLikes = pElts
-        .map(pElt => Number(pElt.textContent))
-        .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+        const idMedia = imgLike.getAttribute('data-id');
+        const pUser = document.querySelector(`p[data-id = '${idMedia}' ]`);
 
-        //affichage résultat
-        pTotal.textContent = sumLikes;
-    };
-    allLikes();
-    // console.log(sumLikes);
+        let nbrLike = Number(pUser.textContent) + 1;
+        pUser.textContent = nbrLike;
+        total();
 };
-

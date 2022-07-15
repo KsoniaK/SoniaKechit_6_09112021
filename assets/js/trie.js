@@ -78,5 +78,5 @@ function trie(conteneurFiltre){
             break; 
    
     }
-    createCardGallery(allMedias, photographerFiltres);
+    createCardGallery(allMedias);
 };
