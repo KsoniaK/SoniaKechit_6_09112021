@@ -12,7 +12,7 @@ async function createCardGallery(medias, photographerFiltres) {
     medias.forEach((media) => {
         listeMedia.innerHTML += mediaCardFactory(media, photographer.name);
         carousel(photographer.name, media);
-    // console.log(test);
+        // console.log(test);
         // likesTotal(photographer.price, media.likes);
         // mediasId(media);
     });

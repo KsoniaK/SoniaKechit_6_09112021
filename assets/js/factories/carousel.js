@@ -6,7 +6,7 @@ function carousel(name, media){
 
     contenuCarousel.innerHTML +=  
         `
-        <div id="carousel" class="carousel">
+        <div class="carousel">
             <div class="divCarousel-img">
                 ${media.image ? photosCarousel : videosCarousel}
             </div>
@@ -18,13 +18,19 @@ function carousel(name, media){
 
 // Ouverture Modal
 function openModalCarousel() {
-    document.getElementById("carousel").style.display = "block";
+    const divCarousel = Array.from(document.querySelectorAll(".carousel"));
+    divCarousel.map((div) =>{
+        div.style.display = "block";
+    })
     document.getElementById("bgc-carousel").style.display = "block";
 }
   
 // Fermeture Modal
 function closeModalCarousel() {
-    document.getElementById("carousel").style.display = "none";
+    const divCarousel = Array.from(document.querySelectorAll(".carousel"));
+    divCarousel.map((div) =>{
+        div.style.display = "none";
+    })
     document.getElementById("bgc-carousel").style.display = "none";
 }
 
