@@ -39,6 +39,6 @@ function likes(imgLike){
         pTotal.textContent = sumLikes;
     };
     allLikes();
-    console.log(sumLikes);
+    // console.log(sumLikes);
 };
 

@@ -15,13 +15,13 @@
     left: 17%;
     background-color: white;
         .carousel{
-            box-shadow: 5px 0px 4px gray;
+            // box-shadow: 5px 0px 4px gray;
             position: absolute;
             left: 8.5%;
             top: 8%;
             width: 50rem;
             height: 65vh;
-            overflow: hidden;
+            // overflow: hidden;
                 & .carousel-img{
                     width: 50rem;
                     height: 65vh;
@@ -60,15 +60,3 @@
             filter: invert(16%) sepia(50%) saturate(4246%) hue-rotate(350deg) brightness(50%) contrast(89%);;
         }
 }
-// .visible{
-//     opacity: 1;
-// }
-// .invisible{
-//     opacity: 0;
-// }
-
-
-
-  .mySlides {
-    display: none;
-  }

@@ -47,13 +47,17 @@
                             text-align: start;
                             margin-top: -15px;
                         }
-                        & img {
+                        & button{
+                            background-color: transparent;
+                            border: none;
                             cursor: pointer;
                             position: relative;
-                            bottom: 4rem;
-                            width: 2rem;
+                            bottom: 9rem;
                             left: 93%;
-                            bottom: 116%;
+                        }
+                        & img {
+                            position: relative;
+                            width: 2rem;
                         }
                 }
                 & form {

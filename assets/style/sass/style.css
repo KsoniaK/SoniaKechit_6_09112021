@@ -60,6 +60,8 @@ body {
     width: 25%;
     height: 40vh;
     margin: 2rem; }
+    .media_profil .media a {
+      display: block; }
     .media_profil .media .description-photos {
       display: flex;
       align-items: center;
@@ -180,13 +182,16 @@ header {
         font-weight: normal;
         text-align: start;
         margin-top: -15px; }
-      #contact_modal .modal header img {
+      #contact_modal .modal header button {
+        background-color: transparent;
+        border: none;
         cursor: pointer;
         position: relative;
-        bottom: 4rem;
-        width: 2rem;
-        left: 93%;
-        bottom: 116%; }
+        bottom: 9rem;
+        left: 93%; }
+      #contact_modal .modal header img {
+        position: relative;
+        width: 2rem; }
     #contact_modal .modal form {
       display: flex;
       width: 100%;
@@ -249,13 +254,11 @@ header {
   left: 17%;
   background-color: white; }
   #carousel-container .carousel {
-    box-shadow: 5px 0px 4px gray;
     position: absolute;
     left: 8.5%;
     top: 8%;
     width: 50rem;
-    height: 65vh;
-    overflow: hidden; }
+    height: 65vh; }
     #carousel-container .carousel .carousel-img {
       width: 50rem;
       height: 65vh;
@@ -286,9 +289,6 @@ header {
     left: 93%;
     top: 8%;
     filter: invert(16%) sepia(50%) saturate(4246%) hue-rotate(350deg) brightness(50%) contrast(89%); }
-
-.mySlides {
-  display: none; }
 
 .section-filtre {
   display: flex;

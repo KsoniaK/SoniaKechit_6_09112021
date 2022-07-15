@@ -12,6 +12,9 @@
             width: 25%;
             height: 40vh;
             margin: 2rem;
+                & a{
+                    display: block;
+                }
                 & .description-photos{
                     display: flex;
                     align-items: center;

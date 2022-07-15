@@ -1,13 +1,13 @@
 //Carousel
 function carousel(name, media){
     const contenuCarousel = document.getElementById('carousel-container');
-    const photosCarousel = `<img class='carousel-img' src="/assets/images/photos/${name}/${media.image}" alt='${media.title}' data-id='${media.id}'/>`
-    const videosCarousel = `<video class='carousel-img' src="/assets/images/photos/${name}/${media.video}" alt='${media.title}' data-id='${media.id}'/></video>`
+    const photosCarousel = `<img class="carousel-img" src="/assets/images/photos/${name}/${media.image}" alt="${media.title}"  data-id="${media.id}"/>`
+    const videosCarousel = `<video class="carousel-img" src="/assets/images/photos/${name}/${media.video}" alt="${media.title}" data-id="${media.id}"/></video>`
 
     contenuCarousel.innerHTML +=  
         `
-        <div id="carousel" class="carousel mySlides">
-            <div class="carousel-img">
+        <div id="carousel" class="carousel">
+            <div class="divCarousel-img">
                 ${media.image ? photosCarousel : videosCarousel}
             </div>
             <p>${media.title}</p>
@@ -28,7 +28,7 @@ function closeModalCarousel() {
     document.getElementById("bgc-carousel").style.display = "none";
 }
 
-// Slide des images
+// Boutons Next et Prev
 function slide(){
     const next = document.getElementById("d");
     const prev = document.getElementById("g");
@@ -42,60 +42,19 @@ function slide(){
 };
 
 
-//   // Ouverture Modal avec image qui correspond
-//   function openModalCarousel() {
-//     // récupération des links
-//     const links = document.querySelectorAll(".media a");
 
-//     // pour chaque lien:
-//     for(let link of links){
-//         // écouteurs click sur les liens
-//         link.addEventListener("click", function(e){
-//             e.preventDefault();
-//             // récupération des images
-//             const imag = document.querySelectorAll(".carousel-img img");
-//             // on cible l'image du lien cliqué
-//             imag.src = this.href;
+function carouselLightbox(){
+    const images = Array.from(document.querySelectorAll(".images-media"));
+    // console.log(images);
+    images.map((image) =>{
+        const dataId = Number(image.getAttribute("data-id"));
+        // console.log(dataId);
+    })
+}
 
-//         // affiche modal et background
-//         document.getElementById("carousel").style.display = "block";
-//         document.getElementById("bgc-carousel").style.display = "block";
-
-//         })
-//     }
-//   }
-
-
-
-
-
-
-
-
-  
-//   const slideIndex = 1;
-//   showSlides(slideIndex);
-  
-//   // Boutons Next/Prev
-//   function plusSlides(n) {
-//     showSlides(slideIndex += n);
-//   }
-  
-// //   // Thumbnail image controls
-// //   function currentSlide(n) {
-// //     showSlides(slideIndex = n);
-// //   }
-  
-//   function showSlides(n) {
-//     let i;
-//     const slides = document.getElementsByClassName("mySlides");
-//     if (n > slides.length) {slideIndex = 1}
-//     if (n < 1) {slideIndex = slides.length}
-//     for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";
-//     }
-//     slides[slideIndex-1].style.display = "block";
-//   }
+function mediasId(media){
+    // console.log(media.id);
+}
 
 
 

@@ -16,8 +16,10 @@ function headerPhotographer(photographer){
         
     headerContact.innerHTML = 
         `<h2>Contactez-moi <br> ${photographer.name}</h2>
-         <img src="assets/images/close.svg" id="carrousel-close-contact" onclick="closeModal()" alt="${photographer.name}"/>`
-
+         <button onclick="closeModal()">
+            <img src="assets/images/close.svg" id="carrousel-close-contact" alt="${photographer.name}"/>
+         </button>
+        `
         return(headerPhotographer, headerContact);
 };
 

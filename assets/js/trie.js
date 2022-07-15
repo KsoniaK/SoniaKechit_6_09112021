@@ -1,23 +1,24 @@
 // Filtres
-function createDropDown(media){
+function createDropDown(){
     const divFiltre = document.getElementById('filtres');
 
     divFiltre.innerHTML = 
         `<ul role="button" aria-haspopup="listbox" aria-expanded id="select" class="test">
           <li role="listbox" class="selected">
-            <option aria-activedescendant="" aria-selected="" aria-labelledby="" onclick="trie('popularite')" id="popularite" class="${media.likes}">Popularité</option>
+            <option aria-activedescendant="" aria-selected="" aria-labelledby="" onclick="trie('popularite')" id="popularite">Popularité</option>
             <img id="arrow-filtre" src="assets/images/down-arrow.png" alt="icone menu filtres">
           </li>
           <li class="selected">
             <hr>
-            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('date')" id="date" class="${media.date}">Date</option>
+            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('date')" id="date">Date</option>
           </li>
           <li class="selected">
             <hr>
-            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('titre')" id="titre" class="${media.title}">Titre</option>
+            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('titre')" id="titre">Titre</option>
           </li>
          </ul>
         `
+        // console.log(divFiltre);
         return(divFiltre);
     };
 
