@@ -68,11 +68,11 @@
     <section id="bgc-carousel" aria-label="voir image">
       <div id="carousel-container">
         <div class="carousel">
-          <div class="divCarousel-img"></div>
+          <div class="divCarousel-multimedias"></div>
           <p></p>
         </div>
-        <i class="fas fa-chevron-left bouton" id="g" alt="image suivante"></i>
-        <i class="fas fa-chevron-left bouton" id="d" alt="image précedente"></i>
+        <i class="fas fa-chevron-left bouton" id="g" alt="image précedente" onclick="prev(this)"></i>
+        <i class="fas fa-chevron-left bouton" id="d" alt="image suivante"  onclick="next(this)"></i>
         <img src="assets/images/close.svg" id="carousel-close" alt="fermeture modal photo" onclick="closeModalCarousel()"/>
       </div>
     </section>
