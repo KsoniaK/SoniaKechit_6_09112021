@@ -2,9 +2,7 @@
 /* eslint-disable no-undef */
 // Filtres
 function createDropDown(){
-	const divFiltre = document.getElementById('filtres');
-
-	divFiltre.innerHTML = 
+	return document.getElementById('filtres').innerHTML = 
         `<ul role="button" aria-haspopup="listbox" aria-expanded id="select" class="test">
           <li role="listbox" class="selected">
             <option aria-activedescendant="" aria-selected="" aria-labelledby="" onclick="trie('popularite')" id="popularite">Popularité</option>
@@ -12,7 +10,7 @@ function createDropDown(){
           </li>
           <li class="selected">
             <hr>
-            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('date') ; salut()" id="date">Date</option>
+            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('date')" id="date">Date</option>
           </li>
           <li class="selected">
             <hr>
@@ -20,16 +18,13 @@ function createDropDown(){
           </li>
          </ul>
         `;
-	// console.log(divFiltre);
-	return(divFiltre);
 }
 
 // au clique, faire apparaître et disparaître le menu filtre
 function toggleDropDown(conteneurFiltre){
-	// console.log(conteneurFiltre);
 	const eltsSelect = Array.from(document.querySelectorAll('.selected'));
 	eltsSelect.splice(0,1);
-	// // console.log(eltsSelect);
+
 	const arrowFiltre = document.getElementById('arrow-filtre');
 
 	if(conteneurFiltre.classList.contains('active')){
@@ -52,6 +47,8 @@ function salut(){
 
 // fonction filtres
 function trie(conteneurFiltre){
+	document.getElementById('popularite').textContent = conteneurFiltre;
+
 	switch(conteneurFiltre){
 	case 'popularite' : 
 		allMedias.sort(function(a, b) {

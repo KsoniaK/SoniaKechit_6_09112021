@@ -16,11 +16,17 @@ function total(){
 }
 
 function likes(imgLike){
+	let nbrLike;
 	const idMedia = imgLike.getAttribute('data-id');
 	const pUser = document.querySelector(`p[data-id = '${idMedia}' ]`);
-
-	let nbrLike = Number(pUser.textContent) + 1;
+	
+	if(!pUser.classList.contains('active')){
+		pUser.classList.add('active');
+		nbrLike = Number(pUser.textContent) + 1;
+	}else{
+		pUser.classList.remove('active');
+		nbrLike = Number(pUser.textContent) - 1;
+	}
 	pUser.textContent = nbrLike;
-	total();
-        
+	total(); 
 }
