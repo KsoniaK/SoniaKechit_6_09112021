@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 // page individuelle
 function mediaCardFactory(media) {
-    const photosMedia = `<img src="/assets/images/photos/${photographerFiltres[0].name}/${media.image}" class="images-media" alt="${media.title}"/>`
-    const videosMedia = `<video src="/assets/images/photos/${photographerFiltres[0].name}/${media.video}" class="videos-media" controls="controls" alt="${media.title}"></video>`
+	const photosMedia = `<img src="/assets/images/photos/${photographerFiltres[0].name}/${media.image}" class="images-media" alt="${media.title}"/>`;
+	const videosMedia = `<video src="/assets/images/photos/${photographerFiltres[0].name}/${media.video}" class="videos-media" controls="controls" alt="${media.title}"></video>`;
 
-    return `
+	return `
         <article class="media">
             <div data-id="${media.id}" onclick="openModalCarousel(this)">
                 ${media.image ? photosMedia : videosMedia}
@@ -15,5 +17,5 @@ function mediaCardFactory(media) {
                     <img onclick="likes(this)" src="/assets/images/like.png" class="likes-img" data-id="${media.id}" alt="likes"/>
                 </div>
             </div>
-        </article>`
-};
+        </article>`;
+}
