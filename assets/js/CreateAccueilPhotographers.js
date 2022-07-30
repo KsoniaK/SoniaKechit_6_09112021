@@ -1,8 +1,11 @@
+// Commentaires pour retirer les erreurs à ignorer dans eslint
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+
+// Création contenu page d'accueil sans template string
 function photographerFactory(photographer) {
 	const {portrait, name, city, country, tagline, price, id} = photographer;
-    
+	// chemin vers les images
 	const picture = `/assets/images/photos/Photographers_ID_Photos/${portrait}`;
 
 	function getUserCardDOM() {
@@ -37,7 +40,6 @@ function photographerFactory(photographer) {
 		article.appendChild(link);
 		link.appendChild(imgElt);
 		link.appendChild(nom);
-		// article.appendChild(nom);
 		article.appendChild(villePays);
 		villePays.appendChild(ville);
 		villePays.appendChild(pays);
@@ -46,8 +48,7 @@ function photographerFactory(photographer) {
 
 		return (article);
 	}
-
-	return {picture,  getUserCardDOM };
+	return {picture,  getUserCardDOM};
 }
 
 

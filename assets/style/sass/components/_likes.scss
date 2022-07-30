@@ -1,28 +1,25 @@
 // compteur likes bas de page
 #compteur-likes_prix{
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    top: 93%;
-    left: 79%;
-    background-color:  #DB8876;
-    width: 20%;
-    height: 7%;
-    z-index: 2;
+    @include DF_JCSA;
+    position: $positionF;
+    top: $pourcentStandard * 93;
+    left: $pourcentStandard * 79;
+    background-color: $bgc_modal_color;
+    width: $pourcentStandard * 20;
+    height: $pourcentStandard * 7;
+    z-index: $uniteStandard * 2;
         .compteur-likes_prix_bas-de-page{
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            width: 30%;
+            @include DF_JCE;
+            align-items: $center;
+            width: $pourcentStandard * 30;
                 & img{
-                    height: 30%;
-                    padding-left: .5rem
-                }
+                    height: $pourcentStandard * 30;
+                    padding-left: $remStandard * .5;
+                };
         };
         .prix{
-            align-items: center;
-            display: flex;
-        }
-}
+            @include DF_AIC;
+        };
+};
 
 

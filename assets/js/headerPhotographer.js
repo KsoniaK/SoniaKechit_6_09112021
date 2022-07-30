@@ -1,5 +1,7 @@
+// Commentaires pour retirer les erreurs à ignorer dans eslint
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+
 // Header page photographer
 function headerPhotographer(){
 	const headerPhotographer = document.getElementById('header-photographer');
@@ -12,7 +14,7 @@ function headerPhotographer(){
             <p class="proverbe-header">${photographerFiltres[0].tagline}</p>
         </div>
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-        <div>
+        <div class="div__header-img">
             <img class="photo-header" src="/assets/images/photos/Photographers_ID_Photos/${photographerFiltres[0].portrait}" alt="${photographerFiltres[0].name}"/>
         </div>`;
         

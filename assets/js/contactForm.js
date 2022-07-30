@@ -1,17 +1,18 @@
+// Commentaires pour retirer les erreurs à ignorer dans eslint
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// ouverture / fermeture formulaire contact
+
+// Ouverture formulaire contact
 function displayModal() {
-	const modal = document.getElementById('contact_modal');
-	modal.style.display = 'block';
+	document.getElementById('contact_modal').style.display = 'block';
 }
 
+// Fermeture formulaire contact
 function closeModal() {
-	const modal = document.getElementById('contact_modal');
-	modal.style.display = 'none';
+	document.getElementById('contact_modal').style.display = 'none';
 }
 
-// on affiche dans la console les données renseignées par l'utilisateur à la soumission du formulaire
+// On affiche dans la console les données renseignées par l'utilisateur à la soumission du formulaire
 function getValue() {
 	// Sélectionner l'élément input et récupérer sa valeur
 	const modal = document.getElementById('contact_modal');
@@ -26,6 +27,7 @@ function getValue() {
 	}else{
 		console.log('Prénom:' + prenom + ' Nom:' + nom + ' Email:' + email + ' Message:' + message);
 		modal.style.display = 'none';
+		// Vider formulaire
 		document.forms[0].reset();
 	}
 }

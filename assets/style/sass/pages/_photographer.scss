@@ -1,56 +1,48 @@
 //Main photographer
-.media_profil{
-    width: 94%;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    justify-content: space-around;
+#liste-media{
+    @include DF_JCSA;
+    width: $pourcentStandard * 94;
+    margin-right: $auto;
+    margin-left: $auto;
     flex-wrap: wrap;
-    // margin-top: 2rem;
-    margin-bottom: 5rem;
-        & .media{
-            width: 25%;
-            height: 40vh;
-            margin: 2rem;
-                & a{
-                    display: block;
-                }
-                & .description-photos{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                        & p{
-                            color: #901C1C;
-                            margin: 0;
-                        }
-                        & .div-jaime{
-                            display: flex;
-                            align-items: center;
-                                & p{
-                                    color: #901C1C;
-                                    padding-right: .5rem;
-                                    margin: 0;
-                                }
-                        }
-                }
-        }
-        & img{
-            width: 100%;
-            height: 40vh;
-            object-fit: cover;
-            cursor: pointer;
-        }
-        & video{
-            width: 100%;
-            height: 40vh;
-            object-fit: cover;
-        }
-        & .likes-img{
-            width: 50%;
-            height: 2vh;
-            filter: invert(17%) sepia(22%) saturate(6583%) hue-rotate(344deg) brightness(101%) contrast(95%);
-                &:hover{
-                    filter: invert(67%) sepia(10%) saturate(1961%) hue-rotate(322deg) brightness(91%) contrast(88%);
-                }
-        }
-}
+    margin-bottom: $remStandard * 5;
+        .media{
+            width: $pourcentStandard * 25;
+            height: $vhStandard * 40;
+            margin: $remStandard * 2;
+                .description-photos{
+                    @include DF_JCSB_AIC;
+                        p{
+                            color: $primary_color;
+                            margin: $uniteNul;
+                        };
+                        .div-jaime{
+                            @include DF_AIC;
+                                p{
+                                    color: $primary_color;
+                                    padding-right: $remStandard * .5;
+                                    margin: $uniteNul;
+                                };
+                                .likes-img{
+                                    width: $pourcentStandard * 50;
+                                    height: $vhStandard * 2;
+                                    filter: invert(17%) sepia(22%) saturate(6583%) hue-rotate(344deg) brightness(101%) contrast(95%);
+                                        &:hover{
+                                            filter: invert(67%) sepia(10%) saturate(1961%) hue-rotate(322deg) brightness(91%) contrast(88%);
+                                        };
+                                };
+                        };
+                };
+                & img{
+                    width: $pourcentStandard * 100;
+                    height: $vhStandard * 40;
+                    object-fit: $cover;
+                    cursor: $pointer;
+                };
+                & video{
+                    width: $pourcentStandard * 100;
+                    height: $vhStandard * 40;
+                    object-fit: $cover;
+                };
+        };
+};

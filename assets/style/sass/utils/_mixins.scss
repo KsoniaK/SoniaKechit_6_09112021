@@ -1,7 +1,4 @@
 //LES MIXINS
-@mixin border($color: blue){
-    border: 2px solid $color
-}
 @mixin box_shadow(){
     box-shadow: 5px 3px 10px 0px lightgray;
 }
@@ -17,8 +14,37 @@
     display: flex;
     justify-content: space-around;
 }
+@mixin DF_JCE{
+    display: flex;
+    justify-content: end;
+}
+@mixin DF_AIC{
+    display: flex;
+    align-items: center;
+}
+@mixin DF_JCC_AIC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin DF_JCSB_AIC{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 @mixin DF_JCSA_AIC{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+@mixin DF_FDC{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@mixin FD_JCSB_AIC{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+

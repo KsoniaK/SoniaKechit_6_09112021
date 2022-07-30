@@ -1,57 +1,60 @@
 //Header accueil
 .header-index{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-        & h1{
-            font-size: 30px;
+    @include DF_JCSB_AIC;
+        h1{
+            font-size: $pxStandard * 30;
             font-weight: normal;
-            color: #901C1C
-        }
-};
-
-// Header page photographer
-header{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-        & h1{
             color: $primary_color;
-            margin-right: 100px;
-        }
-        & .logo{
-            height: 50px;
-            margin-left: 100px;
-            margin-top: 25px;
-            margin-bottom: 25px;
-        }
-}
-.logo-header{
-    display: flex;
-}
-.photograph-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px 10px!important;
-        & h1{
-            color: #D3573C;
-            font-size: 45px;
-            font-weight: normal;
-            margin: 0;
-        }
-        & h2{
-            color: #901C1C;
-        }
-        & .ville-pays-header{
-            display: flex;
-        }
-        & .photo-header{
-            height: 200px;
-            width: 200px;
-            border-radius: 7rem;
-            object-fit: cover;
+        };
+        .logo{
+            height: $pxStandard * 50;
+            margin-left: $pxStandard * 100;
+            margin-top: $pxStandard * 25;
+            margin-bottom: $pxStandard * 25;
         };
 };
+// Header page photographer
+header{
+    @include FD_JCSB_AIC;
+        h1{
+            color: $primary_color;
+            margin-right: $pxStandard * 100;
+        };
+        .logo-header{
+            display: $flex;
+                .logo{
+                    height: $pxStandard * 50;
+                    margin-left: $pxStandard * 100;
+                    margin-top: $pxStandard * 25;
+                    margin-bottom: $pxStandard * 25;
+                };
+        };
+        #header-photographer{
+            @include DF_JCSA_AIC;
+            background-color: $light_color;
+            height: $pxStandard * 300;
+            margin: 0 100px 10px!important;
+                #header-photographer_identite{
+                    h1{
+                        color: $secondary_color;
+                        font-size: $pxStandard * 45;
+                        font-weight: normal;
+                        margin: $uniteNul;
+                    };
+                    h2{
+                        color: $primary_color;
+                        display: $flex;
+                    };
+                };
+                .div__header-img{
+                    .photo-header{
+                        height: $pxStandard * 200;
+                        width: $pxStandard * 200;
+                        border-radius: $remStandard * 7;
+                        object-fit: $cover;
+                    };
+                };
+        };
+
+};
+

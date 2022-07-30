@@ -1,6 +1,8 @@
+// Commentaires pour retirer les erreurs à ignorer dans eslint
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// page individuelle
+
+// Création des médias (opérateur (ternaire) conditionnel = 3 opérandes (1 conditions, 2 expressions)) et likes pour chaque photographe
 function mediaCardFactory(media) {
 	const photosMedia = `<img src="/assets/images/photos/${photographerFiltres[0].name}/${media.image}" class="images-media" alt="${media.title}"/>`;
 	const videosMedia = `<video src="/assets/images/photos/${photographerFiltres[0].name}/${media.video}" class="videos-media" controls="controls" alt="${media.title}"></video>`;

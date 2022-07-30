@@ -2,46 +2,42 @@
 .photographer_section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 70px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-        & article{
-            justify-self: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-                & a{
-                    text-decoration: none;
-                    text-align: center;
-                }
-                & h2{
-                    color: #D3573C;
-                    font-size: 36px;
-                    margin: 0;
-                    font-weight: normal;
-                }
-                & p{
-                    margin: .2rem;
-                }
-                & .prix-photographer{
-                    color: grey;
-                }
-                & .ville-pays{
-                    display: flex;
-                    align-items: center;
+    gap: $pxStandard * 70;
+    margin-top: $pxStandard * 50;
+    margin-bottom: $pxStandard * 50;
+        article{
+            @include DF_JCC_AIC;
+            flex-direction: $column;
+            justify-self: $center;
+                a{
+                    text-decoration: $none;
+                    text-align: $center;
+                        h2{
+                            color: $secondary_color;
+                            font-size: $pxStandard * 36;
+                            margin: $uniteNul;
+                            font-weight: normal;
+                        };
+                        & img{
+                            height: $pxStandard * 200;
+                            width: $pxStandard * 200;
+                            border-radius: $remStandard * 7;
+                            object-fit: $cover;
+                        };
+                };
+                .ville-pays{
+                    @include DF_AIC;
                         & h3{
-                            color: #901C1C;
-                            margin: 0;
-                            padding-right: .5rem;
-                        }
-                }
-                & img{
-                    height: 200px;
-                    width: 200px;
-                    border-radius: 7rem;
-                    object-fit: cover;
-                    
-                }
-        }  
-}
+                            color: $primary_color;
+                            margin: $uniteNul;
+                            padding-right: $remStandard * .5;
+                        };
+                };
+                p{
+                    margin: $remStandard * .2;
+                };
+                .prix-photographer{
+                    color: $price_color;
+                };
+        };
+};

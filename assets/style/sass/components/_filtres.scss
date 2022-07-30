@@ -1,51 +1,47 @@
 // Filtres
 .section-filtre{
-    display: flex;
-    height: 7vh;
-    margin-left: 6rem;
-        & .label-filtre{
-            align-self: center;
-        }
-}
-#filtres{
-    margin-left: 5rem;
-    position: absolute;
-    border: none;
-    background-color: transparent;
-        & .input-filtre{
-            padding: 1rem;
-        }
-        & #select{
-            background-color: #901C1C;
-            color: white;
-            list-style: none;
-            padding: 0;
-            border-radius: 5px;
-                        & img{
-                            width: 1.5rem;
-                            height: 1.5rem;
-                            margin: 1rem;
+    display: $flex;
+    height: $vhStandard * 7;
+    margin-left: $remStandard * 6;
+        .label-filtre{
+            align-self: $center;
+        };
+        #filtres{
+            margin-left: $remStandard * 5;
+            position: $positionA;
+            border: $none;
+            background-color: transparent;
+                #select{
+                    background-color: $primary_color;
+                    color: $light_color;
+                    list-style: $none;
+                    padding: $uniteNul;
+                    border-radius: $pxStandard * 5;
+                    .selected{
+                        display: $none;
+                        width: $pxStandard * 159;
+                        position: $positionR;
+                        &:first-child{
+                            display: $flex;
+                        };
+                        option{
+                            width: $pourcentStandard * 65;
+                            padding: $remStandard;
+                            text-align: $start;
+                        };
+                        #arrow-filtre{
+                            display: $flex;
+                            align-self: $center;
+                            width: $remStandard * 1.5;
+                            height: $remStandard * 1.5;
+                            margin: $remStandard;
                             filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(204deg) brightness(109%) contrast(100%);
-                        }
-                & option{
-                    padding: 1rem;
-                    text-align: start;
-                }
-                & .selected{
-                    display: none;
-                    width: 159px;
-                    position: relative;
-                    &:first-child{
-                        display: flex;
-                    }
-                }
-                    & #arrow-filtre{
-                        display: flex;
-                        align-self: center;
-                    }
-                & hr{
-                    width: 85%;
-                    color: white;
-                }
-        }
-}
+                        };
+                        hr{
+                            width: $pourcentStandard * 85;
+                            color: $light_color;
+                        };
+                    };
+                };
+        };
+};

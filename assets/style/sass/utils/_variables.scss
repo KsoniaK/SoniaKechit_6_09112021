@@ -1,4 +1,51 @@
 //LES VARIABLES
-// LES COULEURS
-$primary_color : #D3573C;
+// Les couleurs
+$primary_color : #901C1C;
+$secondary_color : #D3573C;
 $price_color : #757575;
+$light_color : white;
+$dark_color : black;
+$bgc_modal_color : #DB8876;
+$bgc_button_carousel : invert(16%) sepia(50%) saturate(4246%) hue-rotate(350deg) brightness(50%) contrast(89%);
+
+
+// Les mesures
+$uniteNul : 0;
+$uniteStandard : 1;
+$remNul : 0rem;
+$remStandard : 1rem;
+$pxNul : 0px;
+$pxStandard : 1px;
+$pourcentNul : 0%;
+$pourcentStandard : 1%;
+$vhNul : 0vh;
+$vhStandard : 1vh;
+
+// Positon
+$positionR : relative;
+$positionA : absolute;
+$positionF : fixed;
+$center : center;
+$start : start;
+$end : end;
+$column : column;
+
+// Disposition
+$none : none;
+$block : block;
+$flex : flex;
+$auto : auto;
+
+// Cursor
+$pointer : pointer;
+
+// Images
+$cover : cover;
+
+
+
+
+
+
+
+
