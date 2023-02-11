@@ -7,10 +7,10 @@
             color: $primary_color;
         };
         .logo{
-            height: $pxStandard * 50;
-            margin-left: $pxStandard * 100;
-            margin-top: $pxStandard * 25;
-            margin-bottom: $pxStandard * 25;
+            height: $pxHundred / 2;
+            margin-left: $pxHundred;
+            margin-top: $pxHundred / 4;
+            margin-bottom: $pxHundred / 4;
         };
 };
 // Header page photographer
@@ -18,21 +18,21 @@ header{
     @include FD_JCSB_AIC;
         h1{
             color: $primary_color;
-            margin-right: $pxStandard * 100;
+            margin-right: $pxHundred;
         };
         .logo-header{
             display: $flex;
                 .logo{
-                    height: $pxStandard * 50;
-                    margin-left: $pxStandard * 100;
-                    margin-top: $pxStandard * 25;
-                    margin-bottom: $pxStandard * 25;
+                    height: $pxHundred / 2;
+                    margin-left: $pxHundred;
+                    margin-top: $pxHundred / 4;
+                    margin-bottom: $pxHundred / 4;
                 };
         };
         #header-photographer{
             @include DF_JCSA_AIC;
             background-color: $light_color;
-            height: $pxStandard * 300;
+            height: $pxHundred * 3;
             margin: 0 100px 10px!important;
                 #header-photographer_identite{
                     h1{
@@ -48,8 +48,8 @@ header{
                 };
                 .div__header-img{
                     .photo-header{
-                        height: $pxStandard * 200;
-                        width: $pxStandard * 200;
+                        height: $pxHundred * 2;
+                        width: $pxHundred * 2;
                         border-radius: $remStandard * 7;
                         object-fit: $cover;
                     };

@@ -7,7 +7,7 @@ let index, last, mediaEnd;
 function openModalCarousel(div) {
 	last = allMedias.length - 1;
 	const idMediaCarousel = Number(div.getAttribute('data-id'));
-	// Au click sur le media , vérification correspondance id
+	// Au clic sur le media , vérification correspondance id
 	const mediaClick = allMedias.filter(media => media.id === idMediaCarousel)[0];
 	// Recherche de l'index du média cliqué
 	index = allMedias.map(media => media.id).indexOf(idMediaCarousel);
@@ -42,7 +42,7 @@ function next(){
 		createMultimedia(allMedias[index]);
 		return; 
 	}
-	// Si non incrémentation
+	// Si non, incrémentation
 	index += 1;
 	createMultimedia(allMedias[index]);
 }

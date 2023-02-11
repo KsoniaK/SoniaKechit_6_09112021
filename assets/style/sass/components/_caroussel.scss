@@ -1,6 +1,6 @@
 #bgc-carousel{
     display: $none;
-    width: $pourcentStandard * 100;
+    width: $pourcentHundred;
     height: $vhStandard * 261;
     background-color: rgba(0, 0, 0, 0.3);
     position: $positionA;
@@ -18,7 +18,7 @@
                 position: $positionA;
                 left: $pourcentStandard * 8.5;
                 top: $pourcentStandard * 8;
-                width: $remStandard * 50;
+                width: $remHundred / 2;
                 height: $vhStandard * 65;
                     p{
                         margin: $uniteNul;
@@ -26,7 +26,7 @@
                         color: $primary_color;
                     };
                     .divCarousel-multimedias img, .divCarousel-multimedias video{
-                        width: $pourcentStandard * 100;
+                        width: $pourcentHundred;
                         height: $vhStandard * 65;
                         object-fit: $cover;
                     };

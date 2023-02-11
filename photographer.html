@@ -9,23 +9,23 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="logo-photographer">
+  <header id="header-photographe" class="logo-photographer" aria-label="heading photographer page">
     <div class="logo-header">
-      <a href="./index.html"><img src="assets/images/logo.png" class="logo" alt="Page d'accueil Fisheye"/></a>
+      <a href="./index.html"><img src="assets/images/logo.png" class="logo" alt="Logo Fisheye"></a>
     </div>
     <section id="header-photographer" class="photograph-header"></section>
   </header>
   <!-- Main -->
   <main id="main">
     <!-- Filtres -->
-    <section class="section-filtre">
+    <section class="section-filtre" aria-label="filtres">
       <div class="label-filtre">
         <label>Trier par</label>
       </div>
       <button onclick="toggleDropDown(this)" id="filtres" class="filtre"></button>
     </section>
     <!-- Likes -->
-    <section id="compteur-likes_prix">
+    <section id="compteur-likes_prix" aria-label="section likes">
       <div class='compteur-likes_prix_bas-de-page'>
         <p id='like-total'></p>
         <img src='/assets/images/like.png' alt='likes total'>
@@ -37,14 +37,14 @@
     </section>
     <!-- Contact modal -->
     <section id="contact_modal">
-      <div class="modal">
+      <div id="modal" class="modal" aria-labelledby="modal" aria-describedby="formulaire de contact" aria-modal="true" role="dialog" tabindex="-1">
         <header id="header-contact"></header>
         <form id="monformulaire" name="monformulaire">
-          <div>
+          <div aria-label="formulaire de contact">
             <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" required />
+            <input type="text" id="prenom" name="prenom" required>
             <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" required />
+            <input type="text" id="nom" name="nom" required>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" pattern=".+@globex\.com" size="30" required>
             <label for="message">Votre message</label>
@@ -55,18 +55,18 @@
       </div>
     </section>
     <!-- Medias -->
-    <section id="liste-media" class="media_profil"></section>
+    <section id="liste-media" class="media_profil" aria-label="Photos"></section>
     <!-- Carousel -->
-    <section class="carousel">
-      <div id="bgc-carousel" aria-label="voir image">
-        <div id="carousel-container">
+    <section class="carousel" aria-label="carrousel">
+      <div id="bgc-carousel">
+        <div id="carousel-container" aria-controls="modal">
           <div class="modalCarousel">
             <div class="divCarousel-multimedias"></div>
             <p class="carouselPhotosNames"></p>
           </div>
-          <img src="assets/images/arrow.png" class="bouton" id="g" alt="image précédente" onclick="prev(this)"/>
-          <img src="assets/images/arrow.png" class="bouton" id="d" alt="image suivante" onclick="next(this)"/>
-          <img src="assets/images/close.svg" id="carousel-close" alt="fermeture modal photo" onclick="closeModalCarousel()"/>
+          <img src="assets/images/arrow.png" class="bouton" id="g" alt="image précédente" onclick="prev(this)">
+          <img src="assets/images/arrow.png" class="bouton" id="d" alt="image suivante" onclick="next(this)">
+          <img src="assets/images/close.svg" id="carousel-close" alt="fermeture modal photo" onclick="closeModalCarousel()">
         </div>
       </div>
     </section>

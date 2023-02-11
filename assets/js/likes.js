@@ -11,7 +11,7 @@ function total(){
 
 	prix.textContent = photographerFiltres[0].price;
 
-	// Boucle sur les p contenants les likes
+	// Boucle sur les p contenant les likes
 	pElts.map(pElt => {
 		const pEltsContent = Number(pElt.textContent);
 		// Incrémentation + assignation de la valeur à result

@@ -10,8 +10,9 @@ function init() {
 		// Appel de la fonction qui créée le contenu de la page d'accueil
 		const photographerModel = photographerFactory(photographer);
 		const userCardDOM = photographerModel.getUserCardDOM();
-		// Inseetion dans le DOM
+		// Insertion dans le DOM
 		photographersSection.appendChild(userCardDOM);
+		// photographersSection.innerHTML += userCardDOM;
 	});
 }
 

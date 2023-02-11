@@ -5,21 +5,20 @@
 // Création du filtre
 function createDropDown(){
 	return document.getElementById('filtres').innerHTML = 
-        `<ul role="button" aria-haspopup="listbox" aria-expanded id="select" class="test">
+        `<ul role="button" aria-haspopup="listbox" id="select" class="test" aria-label="liste des filtres">
           <li role="listbox" class="selected">
-            <option aria-activedescendant="" aria-selected="" aria-labelledby="" onclick="trie('popularite')" id="popularite">Popularité</option>
+            <option onclick="trie('Popularité')" id="popularite">Popularité</option>
             <img id="arrow-filtre" src="assets/images/down-arrow.png" alt="icone menu filtres">
           </li>
           <li class="selected">
             <hr>
-            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('date')" id="date">Date</option>
+            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('Date')" id="date">Date</option>
           </li>
           <li class="selected">
             <hr>
-            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('titre')" id="titre">Titre</option>
+            <option aria-activedescendant aria-selected aria-labelledby onclick="trie('Titre')" id="titre">Titre</option>
           </li>
-         </ul>
-        `;
+         </ul>`;
 }
 
 // Au clique, faire apparaître et disparaître le menu filtre
@@ -45,15 +44,13 @@ function toggleDropDown(conteneurFiltre){
 }
 
 // Tries du filtre
+// Paramètre de la fonction: contenu d'<option>
 function trie(conteneurOption){
-	// Paramètre de la fonction: contenu d'<option>
-	// Garder et mettre en majuscule la première lettre de conteneurOption
-	const toUpperCaseConteneurOption = conteneurOption.charAt(0).toUpperCase();
-	document.getElementById('popularite').textContent = toUpperCaseConteneurOption + conteneurOption.slice(1);
+	document.getElementById('popularite').textContent = conteneurOption;
 
 	switch(conteneurOption){
 	// Dans le cas où l'option popularité est selectionée:
-	case 'popularite' : 
+	case 'Popularité' : 
 		// Trie des likes du plus grand au plus petit nombre
 		allMedias.sort(function(a, b) {
 			const titleA = a.likes, titleB = b.likes;
@@ -63,7 +60,7 @@ function trie(conteneurOption){
 		break;
 
 	// Dans le cas où l'option date est selectionée:
-	case 'date' : 
+	case 'Date' : 
 		// Trie des date du plus ancien au plus récent
 		allMedias.sort(function(a, b) {
 			const titleA = a.date, titleB = b.date;
@@ -78,7 +75,7 @@ function trie(conteneurOption){
 		break;
 
 	// Dans le cas où l'option titre est selectionée:
-	case 'titre' : 
+	case 'Titre' : 
 		// Trie des titres par ordre alphabétique une fois qu'ils ont été mis en minuscule
 		allMedias.sort(function(a, b) {
 			const titleA = a.title.toLowerCase(), titleB = b.title.toLowerCase();

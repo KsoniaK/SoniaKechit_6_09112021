@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     margin-bottom: $remStandard * 5;
         .media{
-            width: $pourcentStandard * 25;
+            width: $pourcentHundred / 4;
             height: $vhStandard * 40;
             margin: $remStandard * 2;
                 .description-photos{
@@ -24,7 +24,7 @@
                                     margin: $uniteNul;
                                 };
                                 .likes-img{
-                                    width: $pourcentStandard * 50;
+                                    width: $pourcentHundred / 2;
                                     height: $vhStandard * 2;
                                     filter: invert(17%) sepia(22%) saturate(6583%) hue-rotate(344deg) brightness(101%) contrast(95%);
                                         &:hover{
@@ -33,16 +33,11 @@
                                 };
                         };
                 };
-                & img{
-                    width: $pourcentStandard * 100;
+                & img, video{
+                    width: $pourcentHundred;
                     height: $vhStandard * 40;
                     object-fit: $cover;
                     cursor: $pointer;
-                };
-                & video{
-                    width: $pourcentStandard * 100;
-                    height: $vhStandard * 40;
-                    object-fit: $cover;
                 };
         };
 };

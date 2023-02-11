@@ -8,22 +8,23 @@ function headerPhotographer(){
 	const headerContact = document.getElementById('header-contact');
 
 	headerPhotographer.innerHTML = 
-        `<div id="header-photographer_identite">
+        `<div id="header-photographer_identite" aria-label="Photographer description">
             <h1 class="titre-header">${photographerFiltres[0].name}</h1>
             <h2 class="ville-pays_header">${photographerFiltres[0].city + ', ' + photographerFiltres[0].country}</h2>
             <p class="proverbe-header">${photographerFiltres[0].tagline}</p>
         </div>
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-        <div class="div__header-img">
+        <button class="contact_button" aria-haspopup="dialog" aria-controls="dialog" onclick="displayModal()">Contactez-moi</button>
+        <div class="div__header-img" role="Photographer photo">
             <img class="photo-header" src="/assets/images/photos/Photographers_ID_Photos/${photographerFiltres[0].portrait}" alt="${photographerFiltres[0].name}"/>
         </div>`;
         
 	headerContact.innerHTML = 
-        `<h2>Contactez-moi <br> ${photographerFiltres[0].name}</h2>
+        `<h2 id="modal-heading">Contactez-moi <br> ${photographerFiltres[0].name}</h2>
          <button onclick="closeModal()">
-            <img src="assets/images/close.svg" id="carrousel-close-contact" alt="${photographerFiltres[0].name}"/>
+            <img src="assets/images/close.svg" id="carrousel-close-contact" alt="${photographerFiltres[0].name}"  aria-label="fermer la modale"/>
          </button>
         `;
+        
 	return(headerPhotographer, headerContact);
 }
 

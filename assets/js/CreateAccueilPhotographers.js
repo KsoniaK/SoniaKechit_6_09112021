@@ -5,11 +5,29 @@
 // Création contenu page d'accueil sans template string
 function photographerFactory(photographer) {
 	const {portrait, name, city, country, tagline, price, id} = photographer;
-	// chemin vers les images
+	// Chemin vers les images
 	const picture = `/assets/images/photos/Photographers_ID_Photos/${portrait}`;
 
 	function getUserCardDOM() {
-		// création des élements
+
+		// return `
+		// 		<article id="${id}" class="photographers_profils">
+		// 			<a href="./photographer.html?id=${id}">
+		// 					<img src="${picture}" alt="${name}"/>
+		// 					<h2>${name}<h2/>
+		// 			<a/>
+		// 			<div class="ville-pays">
+		// 					<h3>${country} + ','<h3/>
+		// 					<h3>${city}<h3/>
+		// 			<div/>
+		// 			<p>${tagline}<p/>
+		// 			<p class="prix-photographer">${price} + '€/jour'<p/>
+		// 		<article/>`;
+
+
+
+
+		// Création des élements
 		const article = document.createElement('article');
 		const imgElt = document.createElement('img');
 		const nom = document.createElement('h2');
@@ -20,7 +38,7 @@ function photographerFactory(photographer) {
 		const prix = document.createElement('p');
 		const link = document.createElement('a');
 
-		// ajout d'un attribut
+		// Ajout d'un attribut, d'une class
 		link.setAttribute('href', `./photographer.html?id=${id}`);
 		imgElt.setAttribute('src', picture);
 		imgElt.setAttribute('alt', `${name}`);
@@ -29,14 +47,14 @@ function photographerFactory(photographer) {
 		villePays.classList.add('ville-pays');
 		prix.classList.add('prix-photographer');
 
-		// leur attribuer du contenu. Ici objets JSON
+		// Leur attribuer du contenu. Ici objets JSON
 		nom.textContent = name;
 		ville.textContent = city + ',';
 		pays.textContent = country;
 		proverbe.textContent = tagline;
 		prix.textContent = price + '€/jour';
 
-		// les placer dans le DOM
+		// Les placer dans le DOM
 		article.appendChild(link);
 		link.appendChild(imgElt);
 		link.appendChild(nom);

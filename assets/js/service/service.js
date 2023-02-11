@@ -2,9 +2,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
+// Variable globale : elle sera utilisée dans d'autres fichiers
 let multimedias;
 
-// Récupération des données dans fichier JSON
+// Récupération du fichier JSON
 async function getMultiMedias() {
 	return fetch('./assets/data/photographers.json')
 		.then(response => response.json())

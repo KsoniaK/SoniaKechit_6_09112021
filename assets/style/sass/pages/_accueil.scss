@@ -3,8 +3,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: $pxStandard * 70;
-    margin-top: $pxStandard * 50;
-    margin-bottom: $pxStandard * 50;
+    margin-top: $pxHundred / 2;
+    margin-bottom: $pxHundred / 2;
         article{
             @include DF_JCC_AIC;
             flex-direction: $column;
@@ -19,8 +19,8 @@
                             font-weight: normal;
                         };
                         & img{
-                            height: $pxStandard * 200;
-                            width: $pxStandard * 200;
+                            height: $pxHundred * 2;
+                            width: $pxHundred * 2;
                             border-radius: $remStandard * 7;
                             object-fit: $cover;
                         };

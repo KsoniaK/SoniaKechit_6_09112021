@@ -11,16 +11,16 @@ let allMedias, photographerFiltres;
 // Gestion du contenu de chaque 'carte'
 async function createCardGallery() {
 	const listeMedia = document.getElementById('liste-media');
-	// Mettre à vide la section (lors du click sur un filtre, l'ancien affichage est remplacé)
+	// Mettre à vide la section (lors du clic sur un filtre, l'ancien affichage est remplacé)
 	listeMedia.innerHTML = '';
 	headerPhotographer();
-	// Creer une carte media pour chaque media du photographe
+	// Créer une carte media pour chaque media du photographe
 	allMedias.forEach(media => listeMedia.innerHTML += mediaCardFactory(media));
 }
 
-// fonction asynchrone
+// Fonction asynchrone
 async function init() {
-	// Filtre les medias pour observer l'id du média et ainsi afficher la gallerie du bon photographe grâce à la comparaison avec l'id du photographe dans l'URL
+	// Filtre les medias pour observer l'id du média et ainsi afficher la galerie du bon photographe grâce à la comparaison avec l'id du photographe dans l'URL
 	allMedias = multimedias.medias.filter(medi => Number(idUrl) === medi.photographerId);
 	// Filtre l'id du photographe
 	photographerFiltres = multimedias.photographers.filter(photograph => Number(idUrl) === photograph.id);
@@ -28,7 +28,6 @@ async function init() {
 	createCardGallery();
 	total();
 }
-
 
     
 

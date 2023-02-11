@@ -1,4 +1,5 @@
 //LES VARIABLES
+
 // Les couleurs
 $primary_color : #901C1C;
 $secondary_color : #D3573C;
@@ -8,20 +9,24 @@ $dark_color : black;
 $bgc_modal_color : #DB8876;
 $bgc_button_carousel : invert(16%) sepia(50%) saturate(4246%) hue-rotate(350deg) brightness(50%) contrast(89%);
 
-
 // Les mesures
 $uniteNul : 0;
 $uniteStandard : 1;
+$uniteHundred : 100;
 $remNul : 0rem;
 $remStandard : 1rem;
+$remHundred : 100rem;
 $pxNul : 0px;
 $pxStandard : 1px;
+$pxHundred : 100px;
 $pourcentNul : 0%;
 $pourcentStandard : 1%;
+$pourcentHundred : 100%;
 $vhNul : 0vh;
 $vhStandard : 1vh;
+$vhHundred : 100vh;
 
-// Positon
+// Les positons
 $positionR : relative;
 $positionA : absolute;
 $positionF : fixed;
@@ -30,7 +35,7 @@ $start : start;
 $end : end;
 $column : column;
 
-// Disposition
+// Dispositions
 $none : none;
 $block : block;
 $flex : flex;
@@ -41,9 +46,6 @@ $pointer : pointer;
 
 // Images
 $cover : cover;
-
-
-
 
 
 
