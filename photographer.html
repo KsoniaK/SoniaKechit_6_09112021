@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="stylesheet" href="assets/style/sass/style.css">
-  <link rel="stylesheet" href="assets/style/sass/photographer.css">
   <title>Fisheye - photographe </title>
 </head>
 <body>
@@ -35,25 +34,12 @@
         <span> €/ jour</span>
      </div>
     </section>
-    <!-- Contact modal -->
-    <section id="contact_modal">
-      <div id="modal" class="modal" aria-labelledby="modal" aria-describedby="formulaire de contact" aria-modal="true" role="dialog" tabindex="-1">
-        <header id="header-contact"></header>
-        <form id="monformulaire" name="monformulaire">
-          <div aria-label="formulaire de contact">
-            <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" required>
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" pattern=".+@globex\.com" size="30" required>
-            <label for="message">Votre message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button class="contact_button" onclick="getValue()">Envoyer</button>
-        </form>
-      </div>
-    </section>
+
+
+
+
+
+
     <!-- Medias -->
     <section id="liste-media" class="media_profil" aria-label="Photos"></section>
     <!-- Carousel -->
@@ -71,6 +57,25 @@
       </div>
     </section>
   </main>
+      <!-- Contact modal -->
+      <section id="contact_modal">
+        <div id="modal" class="modal" aria-labelledby="modal" aria-describedby="formulaire de contact" aria-modal="true" role="dialog" tabindex="-1">
+          <header id="header-contact"></header>
+          <form id="monformulaire" name="monformulaire">
+            <div aria-label="formulaire de contact">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required>
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" required>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" pattern=".+@globex\.com" size="30" required>
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="contact_button" onclick="getValue()">Envoyer</button>
+          </form>
+        </div>
+      </section>
   <!-- Scripts -->
   <script src="assets/js/pages/photographers.js"></script>
   <script src="assets/js/service/service.js"></script>

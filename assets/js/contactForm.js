@@ -6,22 +6,27 @@ const btnClose = document.getElementById('contact_modal');
 const modal = document.getElementById('contact_modal');
 const header = document.getElementById('header-photographe');
 const main = document.getElementById('main');
+const prenom = document.getElementById('prenom');
+const closeButton = document.getElementById('carrousel-close-contact');
+// Pour les élements focalisables au clavier
+
+const keyCodes = {tab: 9, enter: 13, escape: 27};
 
 // Ouverture formulaire contact
 function displayModal() {
 	modal.style.display = 'block';
-	modal.removeAttribute = ('aria-hidden');
 	modal.setAttribute = ('aria-hidden', 'false');
 	header.setAttribute = ('aria-hidden', 'true');
 	main.setAttribute = ('aria-hidden', 'true');
-	// prenom.focus();
+	prenom.focus();
+	// closeButton.focus();
 	// btnClose.focus();
-	modal.focus();
+	// modal.focus();
 }
-
 // Fermeture formulaire contact
 function closeModal() {
 	btnClose.style.display = 'none';
+	// closeButton.focus();
 }
 
 // On affiche dans la console les données renseignées par l'utilisateur à la soumission du formulaire
@@ -38,7 +43,6 @@ function getValue() {
 	}else{
 		console.log('Prénom:' + prenom + ' Nom:' + nom + ' Email:' + email + ' Message:' + message);
 		modal.style.display = 'none';
-		modal.removeAttribute = ('aria-hidden');
 		modal.setAttribute = ('aria-hidden', 'true');
 		header.setAttribute = ('aria-hidden', 'false');
 		main.setAttribute = ('aria-hidden', 'false');
@@ -46,3 +50,4 @@ function getValue() {
 		document.forms[0].reset();
 	}
 }
+

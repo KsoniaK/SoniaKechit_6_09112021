@@ -4,11 +4,13 @@
 
 // Ouverture Carousel
 let index, last, mediaEnd;
-function openModalCarousel(div) {
+function openModalCarousel(div) {	
 	last = allMedias.length - 1;
 	const idMediaCarousel = Number(div.getAttribute('data-id'));
+	
 	// Au clic sur le media , vérification correspondance id
 	const mediaClick = allMedias.filter(media => media.id === idMediaCarousel)[0];
+	
 	// Recherche de l'index du média cliqué
 	index = allMedias.map(media => media.id).indexOf(idMediaCarousel);
 	createMultimedia(mediaClick);
@@ -16,6 +18,7 @@ function openModalCarousel(div) {
 
 // Création Carousel
 function createMultimedia(mediaNeed) {
+	
 	// Vérification si image ou vidéo, créer la balise en conséquence
 	mediaEnd = mediaNeed.image ?
 		`<img src="/assets/images/photos/${photographerFiltres[0].name}/${mediaNeed.image}" alt="${mediaNeed.title}" data-id="${mediaNeed.id}"/>`

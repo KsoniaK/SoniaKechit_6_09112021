@@ -4,8 +4,10 @@
 
 // URLSearchParams : définit des méthodes utilitaires pour travailler avec la chaîne de requête (les paramètres GET) d’une URL
 const url = new URLSearchParams(window.location.search);
+// console.log(url);
 // Retourne la première valeur associée au paramètre de recherche donné (ici l'id du photographe)
 const idUrl = url.get('id');
+// console.log(idUrl);
 let allMedias, photographerFiltres;
 
 // Gestion du contenu de chaque 'carte'
@@ -15,6 +17,7 @@ async function createCardGallery() {
 	listeMedia.innerHTML = '';
 	headerPhotographer();
 	// Créer une carte media pour chaque media du photographe
+	// allMedias.forEach(media => console.log(mediaCardFactory(media)));
 	allMedias.forEach(media => listeMedia.innerHTML += mediaCardFactory(media));
 }
 

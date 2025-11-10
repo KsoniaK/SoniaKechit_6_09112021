@@ -43,6 +43,7 @@ function toggleDropDown(conteneurFiltre){
 	}
 }
 
+
 // Tries du filtre
 // Paramètre de la fonction: contenu d'<option>
 function trie(conteneurOption){
@@ -54,6 +55,7 @@ function trie(conteneurOption){
 		// Trie des likes du plus grand au plus petit nombre
 		allMedias.sort(function(a, b) {
 			const titleA = a.likes, titleB = b.likes;
+
 			return titleB - titleA;
 		}); 
 		// On sort du switch si la condition est remplie
@@ -84,7 +86,12 @@ function trie(conteneurOption){
 			return 0;
 		});
 		break; 
-   
 	}
 	createCardGallery(allMedias);
 }
+
+function closeDropDown(e){
+}
+document.body.addEventListener('click', closeDropDown);
+
+

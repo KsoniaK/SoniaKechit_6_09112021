@@ -1,5 +1,5 @@
 //LES MIXINS
-@mixin box_shadow(){
+@mixin box_shadow{
     box-shadow: 5px 3px 10px 0px lightgray;
 }
 @mixin DF_JCC{
@@ -41,6 +41,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+@mixin DF_FDC_AIC{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 @mixin FD_JCSB_AIC{
     flex-direction: row;

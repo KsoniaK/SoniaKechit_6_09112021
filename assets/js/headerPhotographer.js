@@ -13,15 +13,15 @@ function headerPhotographer(){
             <h2 class="ville-pays_header">${photographerFiltres[0].city + ', ' + photographerFiltres[0].country}</h2>
             <p class="proverbe-header">${photographerFiltres[0].tagline}</p>
         </div>
-        <button class="contact_button" aria-haspopup="dialog" aria-controls="dialog" onclick="displayModal()">Contactez-moi</button>
+        <button id="contact_button" class="contact_button" aria-haspopup="dialog" aria-controls="dialog" onclick="displayModal()">Contactez-moi</button>
         <div class="div__header-img" role="Photographer photo">
             <img class="photo-header" src="/assets/images/photos/Photographers_ID_Photos/${photographerFiltres[0].portrait}" alt="${photographerFiltres[0].name}"/>
         </div>`;
         
 	headerContact.innerHTML = 
         `<h2 id="modal-heading">Contactez-moi <br> ${photographerFiltres[0].name}</h2>
-         <button onclick="closeModal()">
-            <img src="assets/images/close.svg" id="carrousel-close-contact" alt="${photographerFiltres[0].name}"  aria-label="fermer la modale"/>
+         <button data-dismiss="dialog">
+            <img src="assets/images/close.svg" id="carrousel-close-contact" alt="${photographerFiltres[0].name}"  aria-label="fermer la modale" onclick="closeModal()"/>
          </button>
         `;
         
