@@ -15,7 +15,7 @@ function headerPhotographer(){
         </div>
         <button id="contact_button" class="contact_button" aria-haspopup="dialog" aria-controls="dialog" onclick="displayModal()">Contactez-moi</button>
         <div class="div__header-img" role="Photographer photo">
-            <img class="photo-header" src="/assets/images/photos/Photographers_ID_Photos/${photographerFiltres[0].portrait}" alt="${photographerFiltres[0].name}"/>
+            <img class="photo-header" src="./assets/images/photos/Photographers_ID_Photos/${photographerFiltres[0].portrait}" alt="${photographerFiltres[0].name}"/>
         </div>`;
         
 	headerContact.innerHTML = 
