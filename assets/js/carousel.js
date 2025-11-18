@@ -21,9 +21,9 @@ function createMultimedia(mediaNeed) {
 	
 	// Vérification si image ou vidéo, créer la balise en conséquence
 	mediaEnd = mediaNeed.image ?
-		`<img src="/assets/images/photos/${photographerFiltres[0].name}/${mediaNeed.image}" alt="${mediaNeed.title}" data-id="${mediaNeed.id}"/>`
+		`<img src="./assets/images/photos/${photographerFiltres[0].name}/${mediaNeed.image}" alt="${mediaNeed.title}" data-id="${mediaNeed.id}"/>`
 		:
-		`<video src="/assets/images/photos/${photographerFiltres[0].name}/${mediaNeed.video}" controls="controls" alt="${mediaNeed.title}" data-id="${mediaNeed.id}"></video>`;
+		`<video src="./assets/images/photos/${photographerFiltres[0].name}/${mediaNeed.video}" controls="controls" alt="${mediaNeed.title}" data-id="${mediaNeed.id}"></video>`;
 
 	document.querySelector('.divCarousel-multimedias').innerHTML= mediaEnd;
 	document.querySelector('.carouselPhotosNames').innerHTML= `${mediaNeed.title}`;
