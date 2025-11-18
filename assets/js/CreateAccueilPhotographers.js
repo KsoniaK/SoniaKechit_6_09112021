@@ -6,7 +6,7 @@
 function photographerFactory(photographer) {
 	const {portrait, name, city, country, tagline, price, id} = photographer;
 	// Chemin vers les images
-	const picture = `/assets/images/photos/Photographers_ID_Photos/${portrait}`;
+	const picture = `./assets/images/photos/Photographers_ID_Photos/${portrait}`;
 
 	function getUserCardDOM() {
 
