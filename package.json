@@ -16,8 +16,9 @@
   "bugs": {
     "url": "https://github.com/KsoniaK/SoniaKechit_6_09112021/issues"
   },
-  "homepage": "https://github.com/KsoniaK/SoniaKechit_6_09112021#readme",
+  "homepage": "https://ksoniak.github.io/SoniaKechit_6_09112021/",
   "devDependencies": {
-    "eslint": "^8.20.0"
+    "eslint": "^8.20.0",
+    "gh-pages": "^6.3.0"
   }
 }
